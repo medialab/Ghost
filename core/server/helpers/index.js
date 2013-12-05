@@ -778,6 +778,25 @@ registerHelpers = function (ghost, config) {
           excerpt
         );
     });
+    /**
+     * If Equals
+     * if_eq this compare=that
+     */
+    registerThemeHelper('if_eq', function(context, options) {
+        if (context == options.hash.compare)
+            return options.fn(this);
+        return options.inverse(this);
+    });
+    registerThemeHelper('split_each', function(context, options) {
+      var ret = "",
+          split = context.split(",");
+
+      for(var i=0, j=split.length; i<j; i++) {
+        ret = ret + options.fn(split[i]);
+      }
+
+      return ret;
+    });
     // end aime
 
     paginationHelper = template.loadTemplate('pagination').then(function (templateFn) {
