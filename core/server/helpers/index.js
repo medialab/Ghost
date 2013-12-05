@@ -649,10 +649,25 @@ registerHelpers = function (ghost, config) {
 
     // aime
     registerThemeHelper('t', function(key, options){
-      var k = key;
+      var k = key,
+          t = '';
       if(typeof options == "string")
         k = key.replace('%s',options);
-      return i18n.__(k);
+      t = i18n.__(k)
+      return t;    
+    });
+    registerThemeHelper('aime_t', function(key, options){
+      var k = key,
+          t = '';
+      if(typeof options == "string")
+        k = key.replace('%s',options);
+      t = i18n.__(k)
+          .replace(/\[[^\]]*\]/g, function(s) {
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+            return "<span class='smallcaps'>" + s + "</span>"
+          });
+      return t;    
     });
     registerThemeHelper('getlocale', function(key){
       return i18n.__(i18n.getLocale());
@@ -663,9 +678,6 @@ registerHelpers = function (ghost, config) {
 
       // return window['Hypher']['languages']['fr'].hyphenateText(text)
       return text
-        .replace(/{([^#]*)#(\d+)}/g,function(a,title,id){
-          return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
-        })
         .replace(/\[[^\]]*\]/g,function(s){
           return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
         }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g,function(s){
@@ -689,9 +701,6 @@ registerHelpers = function (ghost, config) {
         }
 
         excerpt = downsize(excerpt, truncateOptions)
-          .replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
-            return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
-          })
           .replace(/\[[^\]]*\]/g, function(s) {
             return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
           }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
@@ -739,14 +748,12 @@ registerHelpers = function (ghost, config) {
 
         // temp comment following to avoid breaking images [im.jpg] links
 
-        // content = content.replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
-        //     return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
-        //   })
-        //   .replace(/\[[^\]]*\]/g, function(s) {
+        // content = content
+        //    .replace(/\[[^\]]*\]/g, function(s) {
         //     return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
-        //   }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+        //    }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]{2,}/g, function(s) {
         //     return "<span class='smallcaps'>" + s + "</span>"
-        //   });
+        //    });
 
         return new hbs.handlebars.SafeString(content);
     });
@@ -765,9 +772,6 @@ registerHelpers = function (ghost, config) {
         }
 
         excerpt = downsize(excerpt, truncateOptions)
-          .replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
-            return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
-          })
           .replace(/\[[^\]]*\]/g, function(s) {
             return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
           }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
