@@ -388,7 +388,7 @@ coreHelpers.meta_title = function (options) {
     var title,
         blog;
     if (_.isString(this.ghostRoot)) {
-        if (!this.ghostRoot || this.ghostRoot === '/' || this.ghostRoot === '' || this.ghostRoot.match(/\/page/)) {
+        if (!this.ghostRoot || this.ghostRoot === '/' || this.ghostRoot === '' || this.ghostRoot.match(/\/page|\/blog|\/tag/)) {
             blog = coreHelpers.ghost.blogGlobals();
             title = blog.title;
         } else {

@@ -32,7 +32,7 @@ frontendControllers = {
             tag: req.params.tag
         };
         api.posts.getbytag(options).then(function(posts) {
-            res.render('tag', {posts: posts});
+            res.render('tag', { posts: posts });
         }).otherwise(function (err) {
             return next(new Error(err));
         });
