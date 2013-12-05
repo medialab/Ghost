@@ -194,7 +194,7 @@ Post = ghostBookshelf.Model.extend({
       opts.withRelated = [ 'author', 'user', 'tags' ];
       var wantedTagName = opts.tag || "";
       
-      //console.log("tag:",wantedTagName);
+      console.log("tag:",wantedTagName);
       return postCollection
         .query(function(qb) {
           qb.join('posts_tags','posts.id','=','posts_tags.post_id')

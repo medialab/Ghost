@@ -12,11 +12,9 @@ module.exports = function (server) {
     server.get(ghost.settings('permalinks'), frontend.single);
     //server.get('/', frontend.homepage);
 
-
     // aime
     server.get('/page/:page/', frontend.blog);
-    server.get('/blog/', frontend.blog);
-    server.get('/tag/:slug/', frontend.tag);
+    server.get('/tag/:tag/', frontend.tag);
     server.get('/', frontend.homepage);
     server.get('/lang/:lang/', frontend.setlang);
     // end aime

@@ -34,7 +34,9 @@ frontendControllers = {
         api.posts.getbytag(options).then(function(posts) {
             res.render('tag', { posts: posts });
         }).otherwise(function (err) {
-            return next(new Error(err));
+            var e = new Error(err.message);
+            e.status = err.errorCode;
+            return next(e);
         });
     },
     'homepage': function (req, res, next) {
@@ -86,8 +88,6 @@ frontendControllers = {
         });
     },
     // end aime
-
-
 
     'blog': function (req, res, next) {
         var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path,
