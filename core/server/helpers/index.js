@@ -16,6 +16,9 @@ var _               = require('underscore'),
     coreHelpers     = {},
     registerHelpers;
 
+// aime
+var i18n = require('i18n');
+
 /**
  * [ description]
  * @todo ghost core helpers + a way for themes to register them
@@ -570,6 +573,7 @@ coreHelpers.helperMissing = function (arg) {
     errors.logError('Missing helper: "' + arg + '"');
 };
 
+
 // Register a handlebars helper for themes
 function registerThemeHelper(name, fn) {
     hbs.registerHelper(name, fn);
@@ -640,6 +644,141 @@ registerHelpers = function (ghost, config) {
     registerAsyncThemeHelper('meta_title', coreHelpers.meta_title);
 
     registerAsyncThemeHelper('post_class', coreHelpers.post_class);
+
+
+
+    // aime
+    registerThemeHelper('t', function(key, options){
+      var k = key;
+      if(typeof options == "string")
+        k = key.replace('%s',options);
+      return i18n.__(k);
+    });
+    registerThemeHelper('getlocale', function(key){
+      return i18n.__(i18n.getLocale());
+    });
+    registerThemeHelper('decorate', function( text ) {
+      if( typeof text == "undefined" )
+        return '';
+
+      // return window['Hypher']['languages']['fr'].hyphenateText(text)
+      return text
+        .replace(/{([^#]*)#(\d+)}/g,function(a,title,id){
+          return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
+        })
+        .replace(/\[[^\]]*\]/g,function(s){
+          return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+        }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g,function(s){
+          return "<span class='smallcaps'>" + s + "</span>"
+        })
+
+      // return text.replace(/(\s+([;:]))/g,function( a,b ){return "&nbsp;PPPPPPPP" + a.replace(/\s/,'')});
+    });
+    registerThemeHelper('aime_excerpt', function (options) {
+        var truncateOptions = (options || {}).hash || {},
+            excerpt;
+
+        truncateOptions = _.pick(truncateOptions, ['words', 'characters']);
+
+        /*jslint regexp:true */
+        excerpt = String(this.html).replace(/<\/?[^>]+>/gi, '');
+        /*jslint regexp:false */
+
+        if (!truncateOptions.words && !truncateOptions.characters) {
+            truncateOptions.words = 50;
+        }
+
+        excerpt = downsize(excerpt, truncateOptions)
+          .replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
+            return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
+          })
+          .replace(/\[[^\]]*\]/g, function(s) {
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+            return "<span class='smallcaps'>" + s + "</span>"
+          });
+
+        return new hbs.handlebars.SafeString(
+          excerpt
+        );
+    });
+    registerThemeHelper('siteurl', function (options) {
+      return coreHelpers.config.url;
+    });
+    registerThemeHelper('aime_title', function (options) {        
+        var lang = i18n.getLocale();
+        var splitted = this.title.split(/\/\//g);
+        if(splitted.length==2)
+          return splitted[lang=='en' ? 0 : 1];
+        else
+          return this.title;
+    });
+    registerThemeHelper('aime_content', function (options) {
+        var truncateOptions = (options || {}).hash || {},
+            content = this.html;
+
+        var lang = i18n.getLocale();
+        var splitted = content.replace(/^[\s\r\n]+/,"").split(/<!--\s+(en|fr)\s+-->/g).slice(1);
+        var contents = {};
+        try {
+          for(u in splitted) {
+            if(splitted[u]=='en') contents.en = splitted[+u+1];
+            if(splitted[u]=='fr') contents.fr = splitted[+u+1];
+          }
+          content = contents[lang] || content;
+        } catch(err) {
+          console.log("no lang: ",err);
+        }
+
+        truncateOptions = _.pick(truncateOptions, ['words', 'characters']);
+
+        if (truncateOptions.words || truncateOptions.characters) {
+          content = String(content).replace(/<\/?[^>]+>/gi, '');
+          content = downsize(content, truncateOptions);
+        }
+
+        // temp comment following to avoid breaking images [im.jpg] links
+
+        // content = content.replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
+        //     return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
+        //   })
+        //   .replace(/\[[^\]]*\]/g, function(s) {
+        //     return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+        //   }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+        //     return "<span class='smallcaps'>" + s + "</span>"
+        //   });
+
+        return new hbs.handlebars.SafeString(content);
+    });
+    registerThemeHelper('aime_title_excerpt', function (options) {
+      var truncateOptions = (options || {}).hash || {},
+            excerpt;
+
+        truncateOptions = _.pick(truncateOptions, ['words', 'characters']);
+
+        /*jslint regexp:true */
+        excerpt = String(this.title).replace(/<\/?[^>]+>/gi, '');
+        /*jslint regexp:false */
+
+        if (!truncateOptions.words && !truncateOptions.characters) {
+            truncateOptions.words = 10;
+        }
+
+        excerpt = downsize(excerpt, truncateOptions)
+          .replace(/{([^#]*)#(\d+)}/g, function(a, title, id) {
+            return "<span class='link doc' data-id='ref-" + id.replace(/\s/,'') + "'>" + title.replace(/\s$/,'') + "</span>";
+          })
+          .replace(/\[[^\]]*\]/g, function(s) {
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+            return "<span class='smallcaps'>" + s + "</span>"
+          });
+
+        return new hbs.handlebars.SafeString(
+          excerpt
+        );
+    });
+    // end aime
 
     paginationHelper = template.loadTemplate('pagination').then(function (templateFn) {
         coreHelpers.paginationTemplate = templateFn;

@@ -25,6 +25,18 @@ var Ghost        = require('../../ghost'),
 
 // ## Posts
 posts = {
+
+    // aime
+    // #### Get by tag
+    // **takes:** filter
+    getbytag: function getbytag(options) {
+      return dataProvider.Post.findByTag(options).then(function (result) {
+            return result;
+        });
+    },
+    // end aime
+    
+
     // #### Browse
 
     // **takes:** filter / pagination parameters

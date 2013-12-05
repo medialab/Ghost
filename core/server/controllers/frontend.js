@@ -17,7 +17,26 @@ var Ghost   = require('../../ghost'),
     ghost  = new Ghost(),
     frontendControllers;
 
+// aime
+var i18n = require('i18n');
+
 frontendControllers = {
+
+    // aime
+    'setlang': function (req, res, next) {
+        i18n.setLocale(req.params.lang);
+        return res.redirect('/');
+    },
+    'tag': function (req, res, next) {
+        var options = {
+            tag: req.params.tag
+        };
+        api.posts.getbytag(options).then(function(posts) {
+            res.render('tag', {posts: posts});
+        }).otherwise(function (err) {
+            return next(new Error(err));
+        });
+    },
     'homepage': function (req, res, next) {
         var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path,
             // Parse the page number
@@ -59,6 +78,58 @@ frontendControllers = {
             // Render the page of posts
             filters.doFilter('prePostsRender', page.posts).then(function (posts) {
                 res.render('index', {posts: posts, pagination: {page: page.page, prev: page.prev, next: page.next, limit: page.limit, total: page.total, pages: page.pages}});
+            });
+        }).otherwise(function (err) {
+            var e = new Error(err.message);
+            e.status = err.errorCode;
+            return next(e);
+        });
+    },
+    // end aime
+
+
+
+    'blog': function (req, res, next) {
+        var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path,
+            // Parse the page number
+            pageParam = req.params.page !== undefined ? parseInt(req.params.page, 10) : 1,
+            postsPerPage = parseInt(ghost.settings('postsPerPage'), 10),
+            options = {};
+
+        // No negative pages
+        if (isNaN(pageParam) || pageParam < 1) {
+            //redirect to 404 page?
+            return res.redirect(root + '/');
+        }
+        options.page = pageParam;
+
+        // Redirect '/page/1/' to '/' for all teh good SEO
+        if (pageParam === 1 && req.route.path === '/page/:page/') {
+            return res.redirect(root + '/');
+        }
+
+        // No negative posts per page, must be number
+        if (!isNaN(postsPerPage) && postsPerPage > 0) {
+            options.limit = postsPerPage;
+        }
+
+        api.posts.browse(options).then(function (page) {
+            var maxPage = page.pages;
+
+            // A bit of a hack for situations with no content.
+            if (maxPage === 0) {
+                maxPage = 1;
+                page.pages = 1;
+            }
+
+            // If page is greater than number of pages we have, redirect to last page
+            if (pageParam > maxPage) {
+                return res.redirect(maxPage === 1 ? root + '/' : (root + '/page/' + maxPage + '/'));
+            }
+
+            // Render the page of posts
+            filters.doFilter('prePostsRender', page.posts).then(function (posts) {
+                res.render('blog', {posts: posts, pagination: {page: page.page, prev: page.prev, next: page.next, limit: page.limit, total: page.total, pages: page.pages}});
             });
         }).otherwise(function (err) {
             var e = new Error(err.message);

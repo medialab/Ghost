@@ -1,4 +1,37 @@
+# medialab note about this branch
+
 This is the medialab forked branch of Ghost
+
+## Changes
+
+- i18n module to manage {{t 'string'}}
+	- content/locales/*.json
+- routes
+	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
+	
+	- `/` to blog
+
+- some helpers
+- admin list of posts: `published_at` sort rather than `updated_at`
+	- `core/client/router.js`
+	- `core/client/view/blog.js`
+
+## How to : leela/new_home = :2370
+
+- git clone Ghost
+- cd content/themes
+- git clone poltergeist
+
+- gem install sass
+- gem install bourbon
+
+- git submodule update --init
+- npm install -g grunt-cli
+- npm install
+- grunt init
+- npm start
+
+---
 
 # [Ghost](https://github.com/TryGhost/Ghost) [![Build Status](https://travis-ci.org/TryGhost/Ghost.png?branch=master)](https://travis-ci.org/TryGhost/Ghost)
 

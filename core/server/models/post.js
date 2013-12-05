@@ -178,6 +178,38 @@ Post = ghostBookshelf.Model.extend({
 
 }, {
 
+    // aime
+    // #### findByTag
+    // findByTag
+    findByTag:  function (opts) {
+       var postCollection;
+
+      opts = _.extend({
+          status: 'published',
+          orderBy: ['published_at', 'DESC']
+      }, opts);
+
+      postCollection = Posts.forge();
+
+      opts.withRelated = [ 'author', 'user', 'tags' ];
+      var wantedTagName = opts.tag || "";
+      
+      //console.log("tag:",wantedTagName);
+      return postCollection
+        .query(function(qb) {
+          qb.join('posts_tags','posts.id','=','posts_tags.post_id')
+          qb.join('tags','posts_tags.tag_id','=','tags.id')
+          qb.where('tags.name', '=', wantedTagName);
+        })
+        .query('orderBy', opts.orderBy[0], opts.orderBy[1])
+        .fetch(_.omit(opts, 'page', 'limit', 'status', 'orderBy'))
+        .then(function (collection) {
+          return collection.toJSON();
+        }, errors.logAndThrowError);
+    },
+    // end aime
+
+    
     // #### findAll
     // Extends base model findAll to eager-fetch author and user relationships.
     findAll:  function (options) {

@@ -95,7 +95,7 @@
                     status: 'all',
                     page: (self.collection.currentPage + 1),
                     where: { page: 'all' },
-                    orderBy: ['updated_at', 'DESC']
+                    orderBy: ['published_at', 'DESC']
                 }
             }).then(function onSuccess(response) {
                 /*jslint unparam:true*/

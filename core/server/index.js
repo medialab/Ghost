@@ -25,6 +25,12 @@ var config       = require('./config'),
     setup,
     init;
 
+
+// aime
+var i18n = require('i18n');
+// end aime
+
+
 // If we're in development mode, require "when/console/monitor"
 // for help in seeing swallowed promise errors, and log any
 // stderr messages from bluebird promises.
@@ -63,6 +69,23 @@ function setup(server) {
 
         // ## Middleware
         middleware(server);
+
+
+        // aime
+        server.configure(function() {
+            server.use(i18n.init);
+        });
+        // ##Custom i18n configuration
+        i18n.configure({
+            locales:['en','fr'],
+            defaultLocale: 'en',
+            directory: __dirname + '/../../content/locales',
+            indent: "  ",
+            updateFiles: false
+        });
+        //console.log('lang test', i18n.__('LANG_TEST'));
+        // end aime
+
 
         // ## Routing
 
