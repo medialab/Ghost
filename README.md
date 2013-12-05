@@ -16,20 +16,38 @@ This is the medialab forked branch of Ghost
 	- `core/client/router.js`
 	- `core/client/view/blog.js`
 
-## How to : leela/new_home = :2370
+## How to fetch leela/new_home = :2370
 
 - git clone Ghost
-- cd content/themes
-- git clone poltergeist
 
-- gem install sass
-- gem install bourbon
+- please add
+	- `config.js`
+	- `content/data/ghost.db`sqlite database
+
+- for the theme, please now:
+	- either
+		- cd content/themes
+		- git clone http://github.com/medialab/poltergeist.git
+		- git pull
+	- either
+		- add in .submodules
+			[submodule "content/themes/poltergeist"]
+				path = content/themes/poltergeist
+				url = git://github.com/medialab/poltergeist.git
+		- git pull
+
+- sudo gem install sass
+- sudo gem install bourbon
 
 - git submodule update --init
 - npm install -g grunt-cli
 - npm install
 - grunt init
+- grunt
 - npm start
+
+
+
 
 ---
 
