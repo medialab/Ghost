@@ -715,12 +715,20 @@ registerHelpers = function (ghost, config) {
       return coreHelpers.config().url;
     });
     registerThemeHelper('aime_title', function (options) {        
-        var lang = i18n.getLocale();
-        var splitted = this.title.split(/\/\//g);
+        var lang = i18n.getLocale(),
+            splitted = this.title.split(/\/\//g),
+            t;
+        
         if(splitted.length==2)
-          return splitted[lang=='en' ? 0 : 1];
+          t = splitted[lang=='en' ? 0 : 1];
         else
-          return this.title;
+          t = this.title;
+        t = t.replace(/\[[^\]]*\]/g, function(s) {
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
+          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
+            return "<span class='smallcaps'>" + s + "</span>"
+          });
+        return t;
     });
     registerThemeHelper('aime_content', function (options) {
         var truncateOptions = (options || {}).hash || {},
