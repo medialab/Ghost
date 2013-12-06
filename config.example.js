@@ -6,6 +6,8 @@ var path = require('path'),
 
 config = {
     // ### Development **(default)**
+    wordpress_redirect_ids: { '45': 'newslug' },
+    inquiry_url: 'http://modesofexistence.org/inquiry',
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
@@ -45,6 +47,8 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
+        wordpress_redirect_ids: { '45': 'newslug' },
+        inquiry_url: 'http://modesofexistence.org/inquiry',
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
         url: 'http://my-ghost-blog.com',
         mail: {},
