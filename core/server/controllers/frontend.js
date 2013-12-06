@@ -143,9 +143,9 @@ frontendControllers = {
         options.page = pageParam;
 
         // Redirect '/page/1/' to '/' for all teh good SEO
-        if (pageParam === 1 && req.route.path === '/page/:page/') {
-            return res.redirect(root + '/');
-        }
+        // if (pageParam === 1 && req.route.path === '/page/:page/') {
+        //     return res.redirect(root + '/');
+        // }
 
         // No negative posts per page, must be number
         if (!isNaN(postsPerPage) && postsPerPage > 0) {
