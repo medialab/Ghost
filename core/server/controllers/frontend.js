@@ -68,7 +68,10 @@ frontendControllers = {
             tag: req.params.tag
         };
         api.posts.getbytag(options).then(function(posts) {
-            res.render('tag', { posts: posts });
+            res.render('tag', {
+              posts: posts,
+              tag: tag
+            });
         }).otherwise(function (err) {
             var e = new Error(err.message);
             e.status = err.errorCode;
