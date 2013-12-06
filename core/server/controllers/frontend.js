@@ -23,6 +23,42 @@ var i18n = require('i18n');
 frontendControllers = {
 
     // aime
+    shortener: function(req, res, next) {
+      try {
+        var inquiryBase = config().inquiry_url+'/index.php/?lang='+req.params.lang,
+            type = req.params.type,
+            id = req.params.id,
+            trans = {
+              'voc':'vocab',
+              'doc':'doc',
+              'cont':'cont',
+            };
+      
+        var idstr = trans[type]+"-"+id;
+        var tu = type.toUpperCase();
+        var hash = '#a=SET+'+tu+'+LEADER&c[leading]='+tu+'&i[id]=#'+idstr+'&i[column]='+tu;
+        if(type=='cont')
+          hash = '#a=CONTRIB&c[leading]=COM&i[id]=#'+idstr+'&i[column]=COM';
+      } catch(err) {
+        var e = new Error(err.message);
+        e.status = err.errorCode;
+        return next(e); 
+      }
+      console.log(hash);
+      return res.redirect(inquiryBase + hash);
+    },
+    oldposts: function(req, res, next) {
+      var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;
+      var pid = req.param('p');
+      if(pid) {
+        var slug = config().wordpress_redirect_ids[pid] || '/';
+        console.log("redirect to: "+slug);
+        return res.redirect(root +'/'+ slug);
+      }
+      else {
+        return res.redirect(root + '/');
+      }
+    },
     'setlang': function (req, res, next) {
         var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;
         i18n.setLocale(req.params.lang);

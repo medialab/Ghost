@@ -9,14 +9,14 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - routes
 	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
 	- `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
-  - misc routes in `routes/frontend.js` to redirect `/blog/?p=x` old blog end `...org/ime/fr/doc/24`
+  - misc routes in `routes/frontend.js` for redirects
 
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
 	- `core/client/router.js`
 	- `core/client/view/blog.js`
 
-## Install and launch
+## Install
 
 - git clone medialab/Ghost
 
@@ -44,7 +44,17 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - npm install
 - grunt init
 - grunt
-- npm start
+
+### Run
+#### Dev
+  npm start
+
+#### Prod
+  sudo supervisorctl restart aime_home_page
+
+Logs
+  `tail -f /var/log/supervisor/aime_home_page.log`
+  `tail -f /var/log/supervisor/aime_home_page_err.log`
 
 # Migration
 ## Categories are now special tags
@@ -58,13 +68,16 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - empty: 25, /compte-rendu-de-la-journee-denquete-sur-linstitution/
 - ininteressant: 199, /where-standing/
 
-## Redirects to platform
-we changed
-- `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
-- `www.modesofexistence.org/index.php?dskhjLEADER/[tex]...` to `www.modesofexistence.org/ime/fr/voc/43/`
-
 ## TODO
 - flickr galery (http://localhost:2370/ghost/editor/34/ workshop with mediators)
+
+# Redirects
+## in articles
+- `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
+
+## as route
+- `/blog/?p=x` > old blog 
+- `http://www/m...org/ime/fr/doc/24` > platform element
 
 ## TODO Final list of redirections from wordpress to ghost:
 From `http://modesofexistence.org/blog/?p=X` to `http://modesofexistence.org/X` (using `wordpress_redirect_ids`)
@@ -136,7 +149,6 @@ en anglais
 ## Problèmes
 - images
   http://localhost:2370/bang/ghost/editor/45/
-
 
 
 

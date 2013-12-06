@@ -712,7 +712,7 @@ registerHelpers = function (ghost, config) {
         );
     });
     registerThemeHelper('siteurl', function (options) {
-      return coreHelpers.config.url;
+      return coreHelpers.config().url;
     });
     registerThemeHelper('aime_title', function (options) {        
         var lang = i18n.getLocale();
