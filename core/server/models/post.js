@@ -232,7 +232,45 @@ Post = ghostBookshelf.Model.extend({
         }
 
         options.withRelated = [ 'author', 'user', 'tags' ];
-        return ghostBookshelf.Model.findOne.call(this, args, options);
+        return ghostBookshelf.Model.findOne.call(this, args, options).then(function (post) {
+          if (options.withPrevNext && post) {
+            var postData = post.toJSON(),
+                publishedAt = new Date(postData.published_at).getTime(),
+                prev,
+                next;
+
+            next = Post.forge().query(function (qb) {
+               qb.where('status', '=', 'published')
+                  .andWhere('page', '=', 0)
+                  .andWhere('published_at', '>', publishedAt)
+                  .orderBy('published_at', 'asc')
+                  .limit(1);
+            }).fetch();
+
+            prev = Post.forge().query(function (qb) {
+               qb.where('status', '=', 'published')
+                   .andWhere('page', '=', 0)
+                   .andWhere('published_at', '<', publishedAt)
+                   .orderBy('published_at', 'desc')
+                   .limit(1);
+            }).fetch();
+            
+            return when.join(next, prev)
+              .then(function (nextAndPrev) {
+                
+                if (nextAndPrev[0]) {
+                  post.relations.next = nextAndPrev[0];
+                }
+                if (nextAndPrev[1]) {
+                  post.relations.prev = nextAndPrev[1];
+                }
+                return post;
+              });
+          } else {
+            return post;
+          }
+          return false;
+      });
     },
 
      // #### findPage

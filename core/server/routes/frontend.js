@@ -7,24 +7,31 @@ module.exports = function (server) {
     // ### Frontend routes
     /* TODO: dynamic routing, homepage generator, filters ETC ETC */
     
-    // aime redirect old blog posts
-    server.get('/blog/', frontend.oldposts);
-
     server.get('/rss/', frontend.rss);
     server.get('/rss/:page/', frontend.rss);
-    //server.get('/page/:page/', frontend.homepage);
-    server.get(ghost.settings('permalinks'), frontend.single);
-    //server.get('/', frontend.homepage);
 
     // aime
+    
+    // redirect old blog posts
+    server.get('/blog/', frontend.oldposts);
+
+    // list of all blog posts
+    server.get('/page/', frontend.blog);
     server.get('/page/:page/', frontend.blog);
+
+    // posts by tag
     server.get('/tag/:tag/', frontend.tag);
     
+    // set lang
     server.get('/lang/:lang/', frontend.setlang);
 
-    // aime redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
+    // redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
     server.get('/ime/:lang/:type/:id/', frontend.shortener);
-    
+
+    // home
     server.get('/', frontend.homepage);
+
     // end aime
+
+    server.get(ghost.settings('permalinks'), frontend.single);
 };

@@ -2,15 +2,15 @@
 
 This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 
-## Tech changes from Ghost
+## Tech changes from Ghost (reverse chrono)
 
+- patch to have prev/next links on single post - see [this](https://github.com/cobbspur/Ghost/commit/e38a6c02273b16ef44f0d77a61cd49ad6a7c89af#comments)
 - i18n module to manage {{t 'string'}}
 	- content/locales/*.json
 - routes
 	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
 	- `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
   - misc routes in `routes/frontend.js` for redirects
-
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
 	- `core/client/router.js`
