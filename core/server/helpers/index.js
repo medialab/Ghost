@@ -663,7 +663,7 @@ registerHelpers = function (ghost, config) {
         k = key.replace('%s',options);
       t = i18n.__(k)
           .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
           }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
             return "<span class='smallcaps'>" + s + "</span>"
           });
@@ -679,7 +679,7 @@ registerHelpers = function (ghost, config) {
       // return window['Hypher']['languages']['fr'].hyphenateText(text)
       return text
         .replace(/\[[^\]]*\]/g,function(s){
-          return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+          return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
         }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g,function(s){
           return "<span class='smallcaps'>" + s + "</span>"
         })
@@ -702,7 +702,7 @@ registerHelpers = function (ghost, config) {
 
         excerpt = downsize(excerpt, truncateOptions)
           .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
           }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
             return "<span class='smallcaps'>" + s + "</span>"
           });
@@ -773,7 +773,7 @@ registerHelpers = function (ghost, config) {
 
         excerpt = downsize(excerpt, truncateOptions)
           .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
+            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
           }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
             return "<span class='smallcaps'>" + s + "</span>"
           });
