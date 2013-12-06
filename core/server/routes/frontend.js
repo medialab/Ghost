@@ -18,8 +18,9 @@ module.exports = function (server) {
     server.get('/', frontend.homepage);
     server.get('/lang/:lang/', frontend.setlang);
 
-    // shorturl service to redirect to element
-    // http://modesofexistence.org/ime/en/voc/1764/
+    // REDIRECTS
+
+    // 1) shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
     server.get('/ime/:lang/:type/:id/', function(req, res, next) {
       // to be moved in config
       var inquiryBase = 'http://www.modesofexistence.org/inquiry/index.php/?lang='+lang;
@@ -29,5 +30,12 @@ module.exports = function (server) {
       http://www.m#a=SET+VOC+LEADER&amp;c[leading]=VOC&amp;c[slave]=TEXT&amp;i[id]=#vocab-1764&amp;i[column]=VOC&amp;s=0&amp;q=rep
       return res.redirect(inquiryBase+hash);
     });
+    
+    // 2) Old blog posts
+
+    // todo
+
+    // 3) Link to MODE / CROSS !
+
     // end aime
 };

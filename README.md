@@ -1,6 +1,6 @@
 # medialab notes about this branch
 
-This is the medialab forked branch of Ghost
+This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 
 ## Tech changes from Ghost
 
@@ -8,23 +8,23 @@ This is the medialab forked branch of Ghost
 	- content/locales/*.json
 - routes
 	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-	
-	- `/` to blog
+	- `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
+  - misc routes in `routes/frontend.js` to redirect `/blog/?p=x` old blog end `...org/ime/fr/doc/24`
 
-- some helpers
+- some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
 	- `core/client/router.js`
 	- `core/client/view/blog.js`
 
 ## Install and launch
 
-- git clone Ghost
+- git clone medialab/Ghost
 
-- please add
+- please adjust
 	- `config.js`
-	- `content/data/ghost.db`sqlite database
+	- `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
 
-- for the theme, please now:
+- for the theme, please
 	- either
 		- cd content/themes
 		- git clone http://github.com/medialab/poltergeist.git
@@ -39,14 +39,15 @@ This is the medialab forked branch of Ghost
 - sudo gem install sass
 - sudo gem install bourbon
 
-- git submodule update --init
+- git submodule update --init (for casper theme)
 - npm install -g grunt-cli
 - npm install
 - grunt init
 - grunt
 - npm start
 
-## Categories (are special tags in ghost)
+# Migration
+## Categories are now special tags
 - event
 - discuss
 - material
@@ -58,9 +59,12 @@ This is the medialab forked branch of Ghost
 - ininteressant: 199, /where-standing/
 
 ## Redirects to platform
-in all articles:
+we changed
 - `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
-- `www.modesofexistence.org/ime/fr/voc/43/` to the platform element
+- `www.modesofexistence.org/index.php?dskhjLEADER/[tex]...` to `www.modesofexistence.org/ime/fr/voc/43/`
+
+## TODO
+- flickr galery (http://localhost:2370/ghost/editor/34/ workshop with mediators)
 
 ## TODO Final list of redirections from wordpress to ghost:
 from `http://modesofexistence.org/blog/?p=X` to `http://modesofexistence.org/X`
