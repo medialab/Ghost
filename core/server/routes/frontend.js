@@ -32,8 +32,9 @@ module.exports = function (server) {
     });
     
     // 2) Old blog posts
-
-    // todo
+    server.get('/ime/:lang/:type/:id/', function(req, res, next) {
+      wordpress_redirect_ids
+    };
 
     // 3) Link to MODE / CROSS !
 
