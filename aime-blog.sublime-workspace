@@ -52,68 +52,10 @@
 	"buffers":
 	[
 		{
-			"file": "core/server/routes/frontend.js",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1152,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server/controllers/frontend.js",
-			"settings":
-			{
-				"buffer_size": 9080,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server/helpers/index.js",
-			"settings":
-			{
-				"buffer_size": 25929,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/loop-archive.hbs",
-			"settings":
-			{
-				"buffer_size": 688,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README_migration.md",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 2384 files for \"postsPerPage\"\n\n/Users/pierre/poa/poltergeist/core/built/scripts/ghost.js:\n 17219    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n 17220    buffer += escapeExpression(stack1)\n 17221:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n 17222:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n 17223:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n 17224    buffer += escapeExpression(stack1)\n 17225      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n .....\n 19610                  description = this.$('#blog-description').val(),\n 19611                  email = this.$('#email-address').val(),\n 19612:                 postsPerPage = this.$('#postsPerPage').val();\n 19613  \n 19614              Ghost.Validate._errors = [];\n .....\n 19623                  .isEmail().len(0, 254);\n 19624              Ghost.Validate\n 19625:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n 19626                  .isInt().max(1000);\n 19627  \n .....\n 19633                      description: description,\n 19634                      email: email,\n 19635:                     postsPerPage: postsPerPage,\n 19636                      activeTheme: this.$('#activeTheme').val()\n 19637                  }, {\n\n/Users/pierre/poa/poltergeist/core/built/scripts/templates.js:\n  393    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  394    buffer += escapeExpression(stack1)\n  395:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n  396:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n  397:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  398    buffer += escapeExpression(stack1)\n  399      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n\n/Users/pierre/poa/poltergeist/core/built/scripts/views.js:\n 2102                  description = this.$('#blog-description').val(),\n 2103                  email = this.$('#email-address').val(),\n 2104:                 postsPerPage = this.$('#postsPerPage').val();\n 2105  \n 2106              Ghost.Validate._errors = [];\n ....\n 2115                  .isEmail().len(0, 254);\n 2116              Ghost.Validate\n 2117:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n 2118                  .isInt().max(1000);\n 2119  \n ....\n 2125                      description: description,\n 2126                      email: email,\n 2127:                     postsPerPage: postsPerPage,\n 2128                      activeTheme: this.$('#activeTheme').val()\n 2129                  }, {\n\n/Users/pierre/poa/poltergeist/core/client/tpl/hbs-tpl.js:\n  393    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  394    buffer += escapeExpression(stack1)\n  395:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n  396:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n  397:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  398    buffer += escapeExpression(stack1)\n  399      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n\n/Users/pierre/poa/poltergeist/core/client/tpl/settings/general.hbs:\n   50  \n   51              <div class=\"form-group\">\n   52:                 <label for=\"postsPerPage\">Posts per page</label>\n   53:                 <input id=\"postsPerPage\" name=\"general[postsPerPage]\" type=\"number\" value=\"{{postsPerPage}}\" />\n   54                  <p>How many posts should be displayed on each page</p>\n   55              </div>\n\n/Users/pierre/poa/poltergeist/core/client/views/settings.js:\n  160                  description = this.$('#blog-description').val(),\n  161                  email = this.$('#email-address').val(),\n  162:                 postsPerPage = this.$('#postsPerPage').val();\n  163  \n  164              Ghost.Validate._errors = [];\n  ...\n  173                  .isEmail().len(0, 254);\n  174              Ghost.Validate\n  175:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n  176                  .isInt().max(1000);\n  177  \n  ...\n  183                      description: description,\n  184                      email: email,\n  185:                     postsPerPage: postsPerPage,\n  186                      activeTheme: this.$('#activeTheme').val()\n  187                  }, {\n\n/Users/pierre/poa/poltergeist/core/server/controllers/frontend.js:\n   28          // Parse the page number\n   29          var pageParam = req.params.page !== undefined ? parseInt(req.params.page, 10) : 1,\n   30:             postsPerPage = parseInt(ghost.settings('postsPerPage'), 10),\n   31              options = {};\n   32  \n   ..\n   44  \n   45          // No negative posts per page, must be number\n   46:         if (!isNaN(postsPerPage) && postsPerPage > 0) {\n   47:             options.limit = postsPerPage;\n   48          }\n   49  \n   ..\n   87          // Parse the page number\n   88          var pageParam = req.params.page !== undefined ? parseInt(req.params.page, 10) : 1,\n   89:             postsPerPage = parseInt(ghost.settings('postsPerPage'), 10),\n   90              options = {};\n   91  \n   ..\n  103  \n  104          // No negative posts per page, must be number\n  105:         if (!isNaN(postsPerPage) && postsPerPage > 0) {\n  106:             options.limit = postsPerPage;\n  107          }\n  108      \n\n/Users/pierre/poa/poltergeist/core/server/data/default-settings.json:\n   31              }\n   32          },\n   33:         \"postsPerPage\": {\n   34              \"defaultValue\": \"6\",\n   35              \"validations\": {\n\n48 matches across 8 files\n",
-			"settings":
-			{
-				"buffer_size": 7629,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "core/server/data/default-settings.json",
-			"settings":
-			{
-				"buffer_size": 1627,
+				"buffer_size": 4766,
 				"line_ending": "Unix"
 			}
 		},
@@ -121,23 +63,55 @@
 			"file": "config.js",
 			"settings":
 			{
-				"buffer_size": 4060,
+				"buffer_size": 6552,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "content/themes/poltergeist/default.hbs",
+			"file": "core/server/routes/frontend.js",
 			"settings":
 			{
-				"buffer_size": 2209,
+				"buffer_size": 988,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "core/server/controllers/frontend.js",
 			"settings":
 			{
-				"buffer_size": 3536,
+				"buffer_size": 10371,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/server/models/post.js",
+			"settings":
+			{
+				"buffer_size": 16214,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/post.hbs",
+			"settings":
+			{
+				"buffer_size": 97,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/partials/loop-single.hbs",
+			"settings":
+			{
+				"buffer_size": 1879,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/partials/pagination-single.hbs",
+			"settings":
+			{
+				"buffer_size": 192,
 				"line_ending": "Unix"
 			}
 		}
@@ -153,11 +127,11 @@
 				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
 			],
 			[
-				"m",
+				"mark",
 				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
 			],
 			[
-				"mark",
+				"m",
 				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
 			],
 			[
@@ -210,9 +184,21 @@
 	},
 	"file_history":
 	[
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/post.hbs",
+		"/Users/pierre/poa/Ghost/core/server/api/index.js",
+		"/Users/pierre/poa/Ghost/core/server/models/post.js",
+		"/Users/pierre/poa/Ghost/config.example.js",
+		"/Users/pierre/poa/Ghost/core/server/helpers/index.js",
+		"/Users/pierre/poa/Ghost/.gitignore",
+		"/Users/pierre/poa/Ghost/core/server/config/loader.js",
+		"/Volumes/leela/aime_home_page/config.js",
+		"/Users/pierre/poa/Ghost/core/server.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/default.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-archive.hbs",
+		"/Users/pierre/poa/Ghost/core/server/data/default-settings.json",
+		"/Users/pierre/poa/Ghost/README_migration.md",
 		"/Users/pierre/poa/Ghost/core/server/api.js",
 		"/Users/pierre/poa/Ghost/core/server/models/base.js",
-		"/Users/pierre/poa/Ghost/core/server/models/post.js",
 		"/Users/pierre/poa/Ghost/Gruntfile.js",
 		"/Users/pierre/poa/poltergeist/core/config-loader.js",
 		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/secondary-menu.hbs",
@@ -325,19 +311,7 @@
 		"/Users/pierre/poa/aime/protected/runtime/application.log.2",
 		"/Users/pierre/poa/aime/protected/runtime/application.log.1",
 		"/Users/pierre/poa/aime/protected/runtime/application.log",
-		"/Users/pierre/poa/aime/protected/modules/admin/controllers/DefaultController.php",
-		"/Users/pierre/poa/aime/protected/runtime/login.log",
-		"/Users/pierre/poa/aime/protected/views/user/frontendView.php",
-		"/Users/pierre/poa/aime/protected/models/User.php",
-		"/Users/pierre/poa/aime/protected/models/LandingPageLoginForm.php",
-		"/Users/pierre/poa/aime/protected/models/LoginForm.php",
-		"/Users/pierre/poa/aime/protected/views/user/_form.php",
-		"/Users/pierre/poa/aime/protected/views/layouts/display.php",
-		"/Users/pierre/poa/aime/protected/views/user/_frontendForm.php",
-		"/Users/pierre/poa/aime/protected/views/user/_registration.php",
-		"/Users/pierre/poa/aime/protected/views/user/view.php",
-		"/Users/pierre/poa/aime/protected/migrations/messages/en/aime.php",
-		"/Users/pierre/Desktop/aime-api/.gitignore"
+		"/Users/pierre/poa/aime/protected/modules/admin/controllers/DefaultController.php"
 	],
 	"find":
 	{
@@ -345,9 +319,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/pierre/poa/Ghost/, -*.min.js",
 			"/Users/pierre/poa/poltergeist/, -*.min.js",
 			"/Users/pierre/poa/poltergeist/core, -*.min.js",
 			"/Users/pierre/poa/poltergeist/core",
@@ -380,6 +355,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"coreHelpers.url",
+			"coreHelpers.pageUrl",
+			"url",
+			"next",
+			"json",
+			"findone",
+			"/book",
+			"404",
+			"config",
+			"ime",
+			"config",
+			"configFile",
+			"config",
+			"database config",
+			"database",
+			"permalinks",
+			"config",
+			"config(",
+			"wordpress_redirect",
 			"sciences",
 			"sc",
 			"init",
@@ -488,26 +482,7 @@
 			"register",
 			"login  ",
 			"login",
-			"login ",
-			"register",
-			"login ",
-			"#c0171d",
-			"p.title",
-			"log ",
-			"registerLink",
-			"login",
-			"submi",
-			"assets",
-			".modal .modal-header",
-			".modal {",
-			".wrapper {",
-			"blueprint css",
-			"An Inquiry into Modes of Existence - Site",
-			"blueprin",
-			"model",
-			"login",
-			"model",
-			"#login"
+			"login "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -533,153 +508,23 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "core/server/routes/frontend.js",
+					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 1152,
+						"buffer_size": 4766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								958,
-								958
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "core/server/controllers/frontend.js",
-					"settings":
-					{
-						"buffer_size": 9080,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 22.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "core/server.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5235.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "core/server/helpers/index.js",
-					"settings":
-					{
-						"buffer_size": 25929,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3150.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "content/themes/poltergeist/partials/loop-archive.hbs",
-					"settings":
-					{
-						"buffer_size": 688,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								566,
-								566
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "README_migration.md",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								209,
+								209
 							]
 						],
 						"settings":
@@ -695,277 +540,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"settings":
-					{
-						"buffer_size": 7629,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										479,
-										491
-									],
-									[
-										546,
-										558
-									],
-									[
-										576,
-										588
-									],
-									[
-										650,
-										662
-									],
-									[
-										752,
-										764
-									],
-									[
-										1366,
-										1378
-									],
-									[
-										1390,
-										1402
-									],
-									[
-										1591,
-										1603
-									],
-									[
-										1660,
-										1672
-									],
-									[
-										1861,
-										1873
-									],
-									[
-										1875,
-										1887
-									],
-									[
-										2428,
-										2440
-									],
-									[
-										2495,
-										2507
-									],
-									[
-										2525,
-										2537
-									],
-									[
-										2598,
-										2610
-									],
-									[
-										2699,
-										2711
-									],
-									[
-										3361,
-										3373
-									],
-									[
-										3385,
-										3397
-									],
-									[
-										3580,
-										3592
-									],
-									[
-										3649,
-										3661
-									],
-									[
-										3844,
-										3856
-									],
-									[
-										3858,
-										3870
-									],
-									[
-										4404,
-										4416
-									],
-									[
-										4471,
-										4483
-									],
-									[
-										4501,
-										4513
-									],
-									[
-										4574,
-										4586
-									],
-									[
-										4675,
-										4687
-									],
-									[
-										5275,
-										5287
-									],
-									[
-										5346,
-										5358
-									],
-									[
-										5374,
-										5386
-									],
-									[
-										5412,
-										5424
-									],
-									[
-										5755,
-										5767
-									],
-									[
-										5779,
-										5791
-									],
-									[
-										5974,
-										5986
-									],
-									[
-										6043,
-										6055
-									],
-									[
-										6238,
-										6250
-									],
-									[
-										6252,
-										6264
-									],
-									[
-										6588,
-										6600
-									],
-									[
-										6628,
-										6640
-									],
-									[
-										6791,
-										6803
-									],
-									[
-										6808,
-										6820
-									],
-									[
-										6863,
-										6875
-									],
-									[
-										7065,
-										7077
-									],
-									[
-										7105,
-										7117
-									],
-									[
-										7268,
-										7280
-									],
-									[
-										7285,
-										7297
-									],
-									[
-										7340,
-										7352
-									],
-									[
-										7509,
-										7521
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1260.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "core/server/data/default-settings.json",
-					"settings":
-					{
-						"buffer_size": 1627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 1,
 					"file": "config.js",
 					"settings":
 					{
-						"buffer_size": 4060,
+						"buffer_size": 6552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								535,
-								535
+								3970,
+								3854
 							]
 						],
 						"settings":
@@ -979,24 +566,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "content/themes/poltergeist/default.hbs",
+					"buffer": 2,
+					"file": "core/server/routes/frontend.js",
 					"settings":
 					{
-						"buffer_size": 2209,
+						"buffer_size": 988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								850,
+								850
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1005,27 +592,131 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "README.md",
+					"buffer": 3,
+					"file": "core/server/controllers/frontend.js",
 					"settings":
 					{
-						"buffer_size": 3536,
+						"buffer_size": 10371,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								988,
-								988
+								6370,
+								6370
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "core/server/models/post.js",
+					"settings":
+					{
+						"buffer_size": 16214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9064,
+								9064
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 547.0,
+						"translation.y": 3184.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "content/themes/poltergeist/post.hbs",
+					"settings":
+					{
+						"buffer_size": 97,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "content/themes/poltergeist/partials/loop-single.hbs",
+					"settings":
+					{
+						"buffer_size": 1879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "content/themes/poltergeist/partials/pagination-single.hbs",
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

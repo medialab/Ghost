@@ -70,7 +70,7 @@ frontendControllers = {
         api.posts.getbytag(options).then(function(posts) {
             res.render('tag', {
               posts: posts,
-              tag: tag
+              tag: options.tag
             });
         }).otherwise(function (err) {
             var e = new Error(err.message);
