@@ -24,8 +24,9 @@ frontendControllers = {
 
     // aime
     'setlang': function (req, res, next) {
+        var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;
         i18n.setLocale(req.params.lang);
-        return res.redirect('/');
+        return res.redirect(root + '/');
     },
     'tag': function (req, res, next) {
         var options = {

@@ -1,0 +1,1270 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"d",
+				"descr"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"user_",
+				"user_only"
+			],
+			[
+				"content",
+				"content_en"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "core/server/routes/frontend.js",
+			"settings":
+			{
+				"buffer_size": 1152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/server/controllers/frontend.js",
+			"settings":
+			{
+				"buffer_size": 9080,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/server.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/server/helpers/index.js",
+			"settings":
+			{
+				"buffer_size": 25929,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/partials/loop-archive.hbs",
+			"settings":
+			{
+				"buffer_size": 688,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README_migration.md",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 2384 files for \"postsPerPage\"\n\n/Users/pierre/poa/poltergeist/core/built/scripts/ghost.js:\n 17219    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n 17220    buffer += escapeExpression(stack1)\n 17221:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n 17222:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n 17223:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n 17224    buffer += escapeExpression(stack1)\n 17225      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n .....\n 19610                  description = this.$('#blog-description').val(),\n 19611                  email = this.$('#email-address').val(),\n 19612:                 postsPerPage = this.$('#postsPerPage').val();\n 19613  \n 19614              Ghost.Validate._errors = [];\n .....\n 19623                  .isEmail().len(0, 254);\n 19624              Ghost.Validate\n 19625:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n 19626                  .isInt().max(1000);\n 19627  \n .....\n 19633                      description: description,\n 19634                      email: email,\n 19635:                     postsPerPage: postsPerPage,\n 19636                      activeTheme: this.$('#activeTheme').val()\n 19637                  }, {\n\n/Users/pierre/poa/poltergeist/core/built/scripts/templates.js:\n  393    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  394    buffer += escapeExpression(stack1)\n  395:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n  396:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n  397:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  398    buffer += escapeExpression(stack1)\n  399      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n\n/Users/pierre/poa/poltergeist/core/built/scripts/views.js:\n 2102                  description = this.$('#blog-description').val(),\n 2103                  email = this.$('#email-address').val(),\n 2104:                 postsPerPage = this.$('#postsPerPage').val();\n 2105  \n 2106              Ghost.Validate._errors = [];\n ....\n 2115                  .isEmail().len(0, 254);\n 2116              Ghost.Validate\n 2117:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n 2118                  .isInt().max(1000);\n 2119  \n ....\n 2125                      description: description,\n 2126                      email: email,\n 2127:                     postsPerPage: postsPerPage,\n 2128                      activeTheme: this.$('#activeTheme').val()\n 2129                  }, {\n\n/Users/pierre/poa/poltergeist/core/client/tpl/hbs-tpl.js:\n  393    else { stack1 = depth0.email; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  394    buffer += escapeExpression(stack1)\n  395:     + \"\\\" autocapitalize=\\\"off\\\" autocorrect=\\\"off\\\" />\\n                <p>Address to use for admin notifications</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"postsPerPage\\\">Posts per page</label>\\n                <input id=\\\"postsPerPage\\\" name=\\\"general[postsPerPage]\\\" type=\\\"number\\\" value=\\\"\";\n  396:   if (stack1 = helpers.postsPerPage) { stack1 = stack1.call(depth0, {hash:{},data:data}); }\n  397:   else { stack1 = depth0.postsPerPage; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }\n  398    buffer += escapeExpression(stack1)\n  399      + \"\\\" />\\n                <p>How many posts should be displayed on each page</p>\\n            </div>\\n\\n            <div class=\\\"form-group\\\">\\n                <label for=\\\"activeTheme\\\">Theme</label>\\n                <select id=\\\"activeTheme\\\" name=\\\"general[activeTheme]\\\">\\n                    \";\n\n/Users/pierre/poa/poltergeist/core/client/tpl/settings/general.hbs:\n   50  \n   51              <div class=\"form-group\">\n   52:                 <label for=\"postsPerPage\">Posts per page</label>\n   53:                 <input id=\"postsPerPage\" name=\"general[postsPerPage]\" type=\"number\" value=\"{{postsPerPage}}\" />\n   54                  <p>How many posts should be displayed on each page</p>\n   55              </div>\n\n/Users/pierre/poa/poltergeist/core/client/views/settings.js:\n  160                  description = this.$('#blog-description').val(),\n  161                  email = this.$('#email-address').val(),\n  162:                 postsPerPage = this.$('#postsPerPage').val();\n  163  \n  164              Ghost.Validate._errors = [];\n  ...\n  173                  .isEmail().len(0, 254);\n  174              Ghost.Validate\n  175:                 .check(postsPerPage, {message: \"Please use a number less than 1000\", el: $('postsPerPage')})\n  176                  .isInt().max(1000);\n  177  \n  ...\n  183                      description: description,\n  184                      email: email,\n  185:                     postsPerPage: postsPerPage,\n  186                      activeTheme: this.$('#activeTheme').val()\n  187                  }, {\n\n/Users/pierre/poa/poltergeist/core/server/controllers/frontend.js:\n   28          // Parse the page number\n   29          var pageParam = req.params.page !== undefined ? parseInt(req.params.page, 10) : 1,\n   30:             postsPerPage = parseInt(ghost.settings('postsPerPage'), 10),\n   31              options = {};\n   32  \n   ..\n   44  \n   45          // No negative posts per page, must be number\n   46:         if (!isNaN(postsPerPage) && postsPerPage > 0) {\n   47:             options.limit = postsPerPage;\n   48          }\n   49  \n   ..\n   87          // Parse the page number\n   88          var pageParam = req.params.page !== undefined ? parseInt(req.params.page, 10) : 1,\n   89:             postsPerPage = parseInt(ghost.settings('postsPerPage'), 10),\n   90              options = {};\n   91  \n   ..\n  103  \n  104          // No negative posts per page, must be number\n  105:         if (!isNaN(postsPerPage) && postsPerPage > 0) {\n  106:             options.limit = postsPerPage;\n  107          }\n  108      \n\n/Users/pierre/poa/poltergeist/core/server/data/default-settings.json:\n   31              }\n   32          },\n   33:         \"postsPerPage\": {\n   34              \"defaultValue\": \"6\",\n   35              \"validations\": {\n\n48 matches across 8 files\n",
+			"settings":
+			{
+				"buffer_size": 7629,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "core/server/data/default-settings.json",
+			"settings":
+			{
+				"buffer_size": 1627,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.js",
+			"settings":
+			{
+				"buffer_size": 4060,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/default.hbs",
+			"settings":
+			{
+				"buffer_size": 2209,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3536,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				"markd",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"mar",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"ma",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"pret",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/pierre/poa/Ghost/core/server/api.js",
+		"/Users/pierre/poa/Ghost/core/server/models/base.js",
+		"/Users/pierre/poa/Ghost/core/server/models/post.js",
+		"/Users/pierre/poa/Ghost/Gruntfile.js",
+		"/Users/pierre/poa/poltergeist/core/config-loader.js",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/secondary-menu.hbs",
+		"/Users/pierre/poa/poltergeist/config.js",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/blog.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/header-home.hbs",
+		"/Users/pierre/poa/poltergeist/content/locales/en.json",
+		"/Users/pierre/poa/poltergeist/content/locales/fr.json",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/header-blog.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/loop-single.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/post.hbs",
+		"/Users/pierre/poa/poltergeist/.gitignore",
+		"/Users/pierre/poa/poltergeist/README_migration.md",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/tag.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/search.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/index.hbs",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/copyrights.hbs",
+		"/Users/pierre/poa/poltergeist/core/server/models/tag.js",
+		"/Users/pierre/poa/poltergeist/package.json",
+		"/Users/pierre/poa/poltergeist/content/themes/poltergeist/partials/loop-archive.hbs",
+		"/Users/pierre/poa/poltergeist/core/ghost.js",
+		"/Users/pierre/poa/poltergeist/core/client/models/post.js",
+		"/Users/pierre/poa/poltergeist/node_modules/bookshelf/dialects/base/eager.js",
+		"/Users/pierre/poa/poltergeist/core/server/controllers/frontend.js",
+		"/Users/pierre/poa/poltergeist/polte.sublime-project",
+		"/Users/pierre/poa/poltergeist/core/server/controllers/polte.sublime-project",
+		"/Users/pierre/poa/poltergeist/node_modules/bookshelf/dialects/base/model.js",
+		"/Users/pierre/poa/aime/protected/messages/en/aime.php",
+		"/Users/pierre/poa/aime/protected/models/VocabItem.php",
+		"/Users/pierre/poa/aime/protected/models/DocumentItem.php",
+		"/Users/pierre/poa/aime/protected/views/display/book.php",
+		"/Users/pierre/poa/aime/protected/models/Item.php",
+		"/Users/pierre/poa/aime/protected/tests/unit/ItemTest.php",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/maze.engine.parser.js",
+		"/Users/pierre/poa/aime/js/display/maze.engine.js",
+		"/Users/pierre/poa/aime/aime-api/server/private_config.js",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/private_config.js",
+		"/Users/pierre/poa/aime/aime-api/server/package.json",
+		"/Users/pierre/poa/aime/aime-api/.gitignore",
+		"/Users/pierre/poa/aime/protected/views/user/resetPassword.php",
+		"/Users/pierre/poa/aime/protected/views/user/index.php",
+		"/Users/pierre/poa/aime/protected/views/layouts/main.php",
+		"/Users/pierre/poa/aime/js/footer.js",
+		"/Users/pierre/poa/aime/protected/views/site/landingPageLogin.php",
+		"/Users/pierre/poa/aime/protected/controllers/UserController.php",
+		"/Users/pierre/poa/aime/protected/views/site/index.php",
+		"/Users/pierre/poa/aime/protected/messages/en/yii.php",
+		"/Users/pierre/poa/aime/protected/views/layouts/admin.php",
+		"/Users/pierre/poa/aime/protected/controllers/DisplayController.php",
+		"/Users/pierre/poa/aime/protected/views/site/login.php",
+		"/Users/pierre/poa/aime/css/display/style.less",
+		"/Users/pierre/poa/aime/css/style.less",
+		"/Users/pierre/poa/aime/protected/views/layouts/landingPage.php",
+		"/Users/pierre/poa/aime/protected/config/dev_pjdlf.php",
+		"/Users/pierre/poa/aime/js/display/maze.domino.js",
+		"/Users/pierre/poa/aime/js/display/maze.js",
+		"/Users/pierre/poa/aime/protected/components/views/book.php",
+		"/Users/pierre/poa/aime/protected/controllers/ContributionItemsController.php",
+		"/Users/pierre/poa/aime/aime-api/client/README.md",
+		"/Users/pierre/poa/aime/aime-api/README.md",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/bam.utils.js",
+		"/Users/pierre/poa/aime/aime-api/server/config/routes.js",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/bam.parser.js",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/home.js",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/bam.grapher.js",
+		"/Users/pierre/poa/aime/aime-api/server/README.md",
+		"/Users/pierre/poa/aime/aime-api/server/app/views/home/index.jade",
+		"/Users/pierre/poa/aime/aime-api/server/app/controllers/bam.graph.js",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/fromEngine_fr.json",
+		"/Users/pierre/poa/aime/protected/models/ContributionItem.php",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/book_sample.json",
+		"/Users/pierre/poa/aime/js/display/modules/column.js",
+		"/Users/pierre/poa/aime/protected/views/layouts/template.hb",
+		"/Users/pierre/poa/aime/js/display/modules/editor.js",
+		"/Users/pierre/poa/aime/aime-api/server/app/models/book.js",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/book_fr.json",
+		"/Users/pierre/poa/aime/aime-api/server/config/config.js",
+		"/Users/pierre/poa/aime/aime-api/client/myjs/bam.ang.js",
+		"/Users/pierre/poa/aime/aime-api/client/book_charts.html",
+		"/Users/pierre/poa/aime/aime-api/client/partials/book.html",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/book_en.json",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/exported_en.json",
+		"/Users/pierre/poa/aime/aime-api/server/public/data/exported_fr.json",
+		"/Users/pierre/poa/aime.sublime-project",
+		"/Users/pierre/poa/aime/js/display/modules/location.js",
+		"/Users/pierre/poa/aime/js/display/modules/layout.js",
+		"/Users/pierre/poa/aime/protected/components/LangBehavior.php",
+		"/Users/pierre/poa/aime/protected/models/ResetPassword.php",
+		"/Users/pierre/poa/aime/protected/controllers/BookItemsController.php",
+		"/Users/pierre/poa/aime/protected/controllers/ItemController.php",
+		"/Users/pierre/poa/aime/protected/controllers/ItemsController.php",
+		"/Users/pierre/poa/aime/protected/extensions/yii-mail/YiiMailMessage.php",
+		"/Users/pierre/poa/aime/js/index.js",
+		"/Users/pierre/poa/aime/protected/views/layouts/userprofile.php",
+		"/Users/pierre/poa/aime/protected/controllers/SiteController.php",
+		"/Users/pierre/poa/aime/protected/controllers/DocumentItemsController.php",
+		"/Users/pierre/poa/aime/protected/controllers/VocabItemsController.php",
+		"/Users/pierre/poa/aime/protected/controllers/ItemBaseController.php",
+		"/Users/pierre/poa/aime/protected/components/Book.php",
+		"/Users/pierre/poa/aime/protected/widgets/views/LangBox.php",
+		"/Users/pierre/poa/aime/protected/controllers/ImportController.php",
+		"/Users/pierre/poa/aime/protected/controllers/RenderController.php",
+		"/Users/pierre/poa/aime/protected/views/layouts/book.php",
+		"/Users/pierre/poa/aime/protected/views/render/index.php",
+		"/Users/pierre/poa/aime/protected/widgets/LangBox.php",
+		"/Users/pierre/poa/parismap/workers/twitter/twitter_listener.js",
+		"/Users/pierre/poa/aime/protected/views/items/view.php",
+		"/Users/pierre/poa/aime/.htaccess",
+		"/Users/pierre/poa/aime/protected/views/render/view.php",
+		"/Users/pierre/poa/aime/protected/runtime/application.log.2",
+		"/Users/pierre/poa/aime/protected/runtime/application.log.1",
+		"/Users/pierre/poa/aime/protected/runtime/application.log",
+		"/Users/pierre/poa/aime/protected/modules/admin/controllers/DefaultController.php",
+		"/Users/pierre/poa/aime/protected/runtime/login.log",
+		"/Users/pierre/poa/aime/protected/views/user/frontendView.php",
+		"/Users/pierre/poa/aime/protected/models/User.php",
+		"/Users/pierre/poa/aime/protected/models/LandingPageLoginForm.php",
+		"/Users/pierre/poa/aime/protected/models/LoginForm.php",
+		"/Users/pierre/poa/aime/protected/views/user/_form.php",
+		"/Users/pierre/poa/aime/protected/views/layouts/display.php",
+		"/Users/pierre/poa/aime/protected/views/user/_frontendForm.php",
+		"/Users/pierre/poa/aime/protected/views/user/_registration.php",
+		"/Users/pierre/poa/aime/protected/views/user/view.php",
+		"/Users/pierre/poa/aime/protected/migrations/messages/en/aime.php",
+		"/Users/pierre/Desktop/aime-api/.gitignore"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/pierre/poa/poltergeist/, -*.min.js",
+			"/Users/pierre/poa/poltergeist/core, -*.min.js",
+			"/Users/pierre/poa/poltergeist/core",
+			"/Users/pierre/poa/poltergeist/cor",
+			"/Users/pierre/poa/poltergeist/node_modules/bookshelf",
+			"/Users/pierre/poa/poltergeist",
+			"/Users/pierre/poa/aime",
+			"/Users/pierre/poa/aime/protected/views/render",
+			"/Users/pierre/poa/aime/",
+			"/Users/pierre/poa/aime/protected/, *.php",
+			"/Users/pierre/poa/aime, *.php",
+			"/Users/pierre/poa/aime",
+			"/Users/pierre/poa/aime, *.html, *.js, -*.min.js, *.php, *.hb, *.less",
+			"/Users/pierre/poa/aime, *.html, *.js, -*.min.js, *.php, *.hb, .less",
+			"/Users/pierre/poa/aime, *.html, *.js, -*.min.js, *.php, *.hb",
+			"/Users/pierre/poa/aime, *.html, *.js, -*.min.js, *.php",
+			"/Users/pierre/poa/aime, *.html, *.js, -*.min.js",
+			"/Users/pierre/poa/aime, *.html, *.js",
+			"/Users/pierre/poa/aime *.html, *.js",
+			"/Users/pierre/poa/aime",
+			"/Users/pierre/poa/aime/protected",
+			"/Users/pierre/poa/aime",
+			"/Users/pierre/poa/aime/protected/models",
+			"/Users/pierre/poa/aime/protected",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sciences",
+			"sc",
+			"init",
+			"60",
+			"postsPerPage",
+			"60",
+			"postsPerPage",
+			"excvar",
+			"aime_conte",
+			"downsize",
+			"aime_excerpt",
+			"lang/",
+			"the phases",
+			"LANG_TEST",
+			"marche",
+			"the phases",
+			"url",
+			"config",
+			"baseurl",
+			"aime_content",
+			"route",
+			"route\n",
+			"route",
+			"getlocale",
+			"filteredUserAttributes",
+			"title",
+			"prePostsRender",
+			"console.log(",
+			"findAll",
+			"findall",
+			"findPage",
+			"tags",
+			"findAll",
+			"browse",
+			"Post.brow",
+			"post.brow",
+			"prePostsRender",
+			"\":[",
+			"search",
+			"options",
+			"fetch",
+			"findall",
+			"ghostBookshelf",
+			"Post.findPage",
+			"findall",
+			"importJson",
+			"nestedSetBehavior",
+			"nes",
+			"maze.events",
+			"export json",
+			"maze.engine.parser",
+			"signin-popup",
+			"Un problème est survenu. merci de contacter l'équipe",
+			"validat",
+			"passw",
+			"redirec",
+			"77",
+			"GO_TO_HOME",
+			"logo",
+			"phpcode",
+			"validateEmail",
+			"performAjaxValidation",
+			"requestResetPassword",
+			"forgotPasswordHead",
+			"test",
+			"'beforeValidateAttribute' => 'js:test',",
+			"test",
+			"$this->render(",
+			"actionResetPassword",
+			"indexPage",
+			"notre base",
+			"base",
+			"{t",
+			"dans notre base",
+			"couldn't find the ref_content",
+			"match",
+			"\\s",
+			"/s",
+			"·",
+			"resetP",
+			"yiiactiveform",
+			"validateEmail",
+			"requestPW",
+			"errorMessage",
+			"('#login-form').yiiactiveform",
+			"requestPW",
+			"ne peut être",
+			"vide",
+			"jQuery('#login-form').yiiactiveform",
+			"jQuery('#log",
+			"log",
+			"jQuery('#",
+			"register-popup-caller",
+			"requestResetPassword",
+			"Mot de passe oublié ?",
+			"requestResetPassword",
+			" research has received funding f",
+			"requestResetPassword",
+			"email ne peut être vide",
+			"credits-popup",
+			"credits",
+			"-bod",
+			"-bof",
+			"-bod",
+			"reg",
+			"register",
+			"login  ",
+			"login",
+			"login ",
+			"register",
+			"login ",
+			"#c0171d",
+			"p.title",
+			"log ",
+			"registerLink",
+			"login",
+			"submi",
+			"assets",
+			".modal .modal-header",
+			".modal {",
+			".wrapper {",
+			"blueprint css",
+			"An Inquiry into Modes of Existence - Site",
+			"blueprin",
+			"model",
+			"login",
+			"model",
+			"#login"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"danieler",
+			"",
+			"parse_doc_media",
+			"\\t",
+			"\"#6293FE\"",
+			"",
+			"________",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "core/server/routes/frontend.js",
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								958,
+								958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "core/server/controllers/frontend.js",
+					"settings":
+					{
+						"buffer_size": 9080,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								655,
+								655
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "core/server.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5235.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "core/server/helpers/index.js",
+					"settings":
+					{
+						"buffer_size": 25929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3150.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "content/themes/poltergeist/partials/loop-archive.hbs",
+					"settings":
+					{
+						"buffer_size": 688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								566,
+								566
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "README_migration.md",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"parser": "github",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"target": "disk"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 7629,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										479,
+										491
+									],
+									[
+										546,
+										558
+									],
+									[
+										576,
+										588
+									],
+									[
+										650,
+										662
+									],
+									[
+										752,
+										764
+									],
+									[
+										1366,
+										1378
+									],
+									[
+										1390,
+										1402
+									],
+									[
+										1591,
+										1603
+									],
+									[
+										1660,
+										1672
+									],
+									[
+										1861,
+										1873
+									],
+									[
+										1875,
+										1887
+									],
+									[
+										2428,
+										2440
+									],
+									[
+										2495,
+										2507
+									],
+									[
+										2525,
+										2537
+									],
+									[
+										2598,
+										2610
+									],
+									[
+										2699,
+										2711
+									],
+									[
+										3361,
+										3373
+									],
+									[
+										3385,
+										3397
+									],
+									[
+										3580,
+										3592
+									],
+									[
+										3649,
+										3661
+									],
+									[
+										3844,
+										3856
+									],
+									[
+										3858,
+										3870
+									],
+									[
+										4404,
+										4416
+									],
+									[
+										4471,
+										4483
+									],
+									[
+										4501,
+										4513
+									],
+									[
+										4574,
+										4586
+									],
+									[
+										4675,
+										4687
+									],
+									[
+										5275,
+										5287
+									],
+									[
+										5346,
+										5358
+									],
+									[
+										5374,
+										5386
+									],
+									[
+										5412,
+										5424
+									],
+									[
+										5755,
+										5767
+									],
+									[
+										5779,
+										5791
+									],
+									[
+										5974,
+										5986
+									],
+									[
+										6043,
+										6055
+									],
+									[
+										6238,
+										6250
+									],
+									[
+										6252,
+										6264
+									],
+									[
+										6588,
+										6600
+									],
+									[
+										6628,
+										6640
+									],
+									[
+										6791,
+										6803
+									],
+									[
+										6808,
+										6820
+									],
+									[
+										6863,
+										6875
+									],
+									[
+										7065,
+										7077
+									],
+									[
+										7105,
+										7117
+									],
+									[
+										7268,
+										7280
+									],
+									[
+										7285,
+										7297
+									],
+									[
+										7340,
+										7352
+									],
+									[
+										7509,
+										7521
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "core/server/data/default-settings.json",
+					"settings":
+					{
+						"buffer_size": 1627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "config.js",
+					"settings":
+					{
+						"buffer_size": 4060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								535,
+								535
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "content/themes/poltergeist/default.hbs",
+					"settings":
+					{
+						"buffer_size": 2209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								472,
+								472
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 3536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								988,
+								988
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 547.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"item",
+				"protected/models/Item.php"
+			],
+			[
+				"book",
+				"protected/views/display/book.php"
+			],
+			[
+				"voca",
+				"protected/models/VocabItem.php"
+			],
+			[
+				"contrib",
+				"protected/models/ContributionItem.php"
+			],
+			[
+				"models/doc",
+				"protected/models/DocumentItem.php"
+			],
+			[
+				"book.php",
+				"protected/views/display/book.php"
+			],
+			[
+				"maze.engi",
+				"js/display/maze.engine.js"
+			],
+			[
+				"user",
+				"protected/controllers/UserController.php"
+			],
+			[
+				"yiimailmess",
+				"protected/extensions/yii-mail/YiiMailMessage.php"
+			],
+			[
+				"contributioncontroll",
+				"protected/controllers/ContributionItemsController.php"
+			],
+			[
+				"contributionco",
+				"protected/controllers/ContributionItemsController.php"
+			],
+			[
+				".less",
+				"css/display/style.less"
+			],
+			[
+				"contri",
+				"protected/controllers/ContributionItemsController.php"
+			],
+			[
+				"engine",
+				"js/display/maze.engine.js"
+			],
+			[
+				"contr",
+				"protected/controllers/ContributionItemsController.php"
+			],
+			[
+				"temp",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"colum",
+				"js/display/modules/column.js"
+			],
+			[
+				"template",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"templ",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"langbe",
+				"protected/components/LangBehavior.php"
+			],
+			[
+				"site",
+				"protected/controllers/SiteController.php"
+			],
+			[
+				"aime.php",
+				"protected/migrations/messages/en/aime.php"
+			],
+			[
+				"style.l",
+				"css/display/style.less"
+			],
+			[
+				"style.less",
+				"css/display/style.less"
+			],
+			[
+				"template.",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"maze.move",
+				"js/display/maze.move.text.js"
+			],
+			[
+				"templa",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"template.hb",
+				"protected/views/layouts/template.hb"
+			],
+			[
+				"pjdlf",
+				"protected/config/dev_pjdlf.php"
+			],
+			[
+				"maze.js",
+				"js/display/maze.js"
+			],
+			[
+				"contribution",
+				"protected/models/ContributionItem.php"
+			],
+			[
+				"documenti",
+				"protected/models/DocumentItem.php"
+			],
+			[
+				"index.php",
+				"protected/views/site/index.php"
+			],
+			[
+				"dev.",
+				"protected/config/dev_pjdlf.php"
+			],
+			[
+				"_local/inde",
+				"_local/index.php"
+			],
+			[
+				"dev",
+				"protected/config/dev_pjdlf.php"
+			],
+			[
+				"contribu",
+				"protected/controllers/ContributionItemsController.php"
+			],
+			[
+				"err",
+				"protected/views/site/error.php"
+			],
+			[
+				"book.p",
+				"protected/views/display/book.php"
+			],
+			[
+				"style.le",
+				"css/display/style.less"
+			],
+			[
+				"sty",
+				"css/style.less"
+			],
+			[
+				"layout.js",
+				"js/display/modules/layout.js"
+			],
+			[
+				"maze",
+				"js/display/maze.js"
+			],
+			[
+				"",
+				"protected/views/layouts/template.hb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 277.0,
+	"status_bar_visible": true
+}
