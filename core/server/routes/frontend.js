@@ -6,6 +6,8 @@ var frontend    = require('../controllers/frontend'),
 module.exports = function (server) {
     // ### Frontend routes
     /* TODO: dynamic routing, homepage generator, filters ETC ETC */
+    
+    // aime redirect old blog posts
     server.get('/blog/', frontend.oldposts);
 
     server.get('/rss/', frontend.rss);
@@ -17,16 +19,12 @@ module.exports = function (server) {
     // aime
     server.get('/page/:page/', frontend.blog);
     server.get('/tag/:tag/', frontend.tag);
-    server.get('/', frontend.homepage);
+    
     server.get('/lang/:lang/', frontend.setlang);
 
-    // REDIRECTS
-    // 1) shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
+    // aime redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
     server.get('/ime/:lang/:type/:id/', frontend.shortener);
-    // 2) Old blog posts
     
-    // 3) Link to MODE / CROSS !
-    // to do
-
+    server.get('/', frontend.homepage);
     // end aime
 };

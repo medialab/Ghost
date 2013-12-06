@@ -54,8 +54,7 @@ frontendControllers = {
         var slug = config().wordpress_redirect_ids[pid] || '/';
         console.log("redirect to: "+slug);
         return res.redirect(root +'/'+ slug);
-      }
-      else {
+      } else {
         return res.redirect(root + '/');
       }
     },
