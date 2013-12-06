@@ -144,5 +144,13 @@
   "faq.modes" : "modes",
   "faq.modes.question": "Why do you name the modes through the use of the substantive and not by other more active expressions?",
   "faq.modes.question.short": "about the modes ...",
-  "faq.modes.question.content": "Since every mode has so far been defined by trajectory, hiatus, reprise and specific category mistakes, and since every effort has been made to avoid undercutting the notion of ‘substance’, we thought that the labels given to them were not so important. This is why we always use acronyms ([REP], [FIC], [REF]) to make it clear that what we designate by those letters are not to be taken as the domains, regions, substances or stable ontologies of reproduction, fiction, reference etc. There is no general solution to the problem of names. Usage only shows what a word means. The only rule that we followed was to avoid inventing technical jargon."
+  "faq.modes.question.content": "Since every mode has so far been defined by trajectory, hiatus, reprise and specific category mistakes, and since every effort has been made to avoid undercutting the notion of ‘substance’, we thought that the labels given to them were not so important. This is why we always use acronyms ([REP], [FIC], [REF]) to make it clear that what we designate by those letters are not to be taken as the domains, regions, substances or stable ontologies of reproduction, fiction, reference etc. There is no general solution to the problem of names. Usage only shows what a word means. The only rule that we followed was to avoid inventing technical jargon.",
+  "--": "--",
+  "--": "--",
+  "legal.introduction": "introduction",
+  "legal.introduction.short": "introduction",
+  "legal.introduction.content": "introduction long content",
+  "legal.privacy": "privacy",
+  "legal.privacy.short": "privacy",
+  "legal.privacy.content": "introduction long content"
 }
