@@ -6,35 +6,35 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 
 - patch to have prev/next links on single post - see [this](https://github.com/cobbspur/Ghost/commit/e38a6c02273b16ef44f0d77a61cd49ad6a7c89af#comments)
 - i18n module to manage {{t 'string'}}
-	- content/locales/*.json
+  - content/locales/*.json
 - routes
-	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-	- `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
+  - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
+  - `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
   - misc routes in `routes/frontend.js` for redirects
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
-	- `core/client/router.js`
-	- `core/client/view/blog.js`
+  - `core/client/router.js`
+  - `core/client/view/blog.js`
 
 ## Install
 
 - git clone medialab/Ghost
 
 - please adjust
-	- `config.js`
-	- `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
+  - `config.js`
+  - `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
 
 - for the theme, please
-	- either
-		- cd content/themes
-		- git clone http://github.com/medialab/poltergeist.git
-		- git pull
-	- either
-		- add in .submodules
-			[submodule "content/themes/poltergeist"]
-				path = content/themes/poltergeist
-				url = git://github.com/medialab/poltergeist.git
-		- git pull
+  - either
+    - cd content/themes
+    - git clone http://github.com/medialab/poltergeist.git
+    - git pull
+  - either
+    - add in .submodules
+      [submodule "content/themes/poltergeist"]
+        path = content/themes/poltergeist
+        url = git://github.com/medialab/poltergeist.git
+    - git pull
 
 - sudo gem install sass
 - sudo gem install bourbon
@@ -146,4 +146,5 @@ en français
 en anglais
 
 ## TODO
+- post.tag in single view !
 - use bitly api to track /ime/fr/doc/1234 links
