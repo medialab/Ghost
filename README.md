@@ -8,9 +8,10 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - i18n module to manage {{t 'string'}}
   - content/locales/*.json
 - routes
+  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243`)
+  - `/blog` and `/blog?p=234` redirect to the blog article (to keep running old blog links)
   - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
   - `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
-  - misc routes in `routes/frontend.js` for redirects
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
   - `core/client/router.js`
@@ -69,26 +70,17 @@ Logs
 - ininteressant: 199, /where-standing/
 
 # Redirects
-## in articles
+## were updated in articles
 - `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
-
-## as route
-- `/blog/?p=x` > old blog 
-- `http://www/m...org/ime/fr/doc/24` > platform element
-
-## Redirections from wordpress to ghost:
-From `http://modesofexistence.org/blog/?p=X` to `http://modesofexistence.org/X` (using `wordpress_redirect_ids`)
-
-Pages are redirect to `/`
+- old blog links `/blog/?p=x` (see routes above)
+- platform elements `/ime/en/cont/123` (see routes above)
 
 ## Disqus translation .csv
 To be used in the disqs website under tools > migration
 
-(verify that no comment were posted at the last minute!)
+Comments on pages were deleted
 
-Comments on pages are deleted
-
-## Redirects
+## Redirect URLs
 following is stored in `config.js`
     
 > wordpress_redirect_ids = {
