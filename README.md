@@ -92,6 +92,9 @@ Comments on pages are deleted
 following is stored in `config.js`
     
 > wordpress_redirect_ids = {
+  "511":  "clarifications-on-refocusing-the-aime-inquiry",
+  "499":  "seminary-at-the-namur-ulb-seminaire-a-luniversite-de-namur-ulb",
+  "493":  "refocusing-the-aime-inquiry-recentrer-lenquete-eme",
   "482":  "qa-n1-monday-9-december-between-530-and-730-p-m",
   "473":  "some-reflections-after-the-workshop-repc2b7ref",
   "464":  "chicago",
