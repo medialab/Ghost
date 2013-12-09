@@ -809,6 +809,22 @@ registerHelpers = function (ghost, config) {
 
       return ret;
     });
+    registerThemeHelper('if_in', function(context, options) {
+      var ret = "",
+          split = options.hash.compare.split(",");
+      // console.log('if_in',split,this,split.indexOf(this))
+      if(split.indexOf(context)=== -1)
+        return options.inverse(this);
+      return options.fn(this);
+    });
+    registerThemeHelper('unless_in', function(context, options) {
+      var ret = "",
+          split = options.hash.compare.split(",");
+
+      if(split.indexOf(context)=== -1)
+        return options.fn(this);
+      return options.inverse(this);
+    });
     // end aime
 
     paginationHelper = template.loadTemplate('pagination').then(function (templateFn) {
