@@ -788,13 +788,20 @@ registerHelpers = function (ghost, config) {
         return new hbs.handlebars.SafeString(content);
     });
     registerThemeHelper('aime_title_excerpt', function (options) {
-      var truncateOptions = (options || {}).hash || {},
-            excerpt;
+      var lang = i18n.getLocale(),
+          splitted = this.title.split(/\/\//g),
+          truncateOptions = (options || {}).hash || {},
+          excerpt;
+
+        if(splitted.length==2)
+          t = splitted[lang=='en' ? 0 : 1];
+        else
+          t = this.title;
 
         truncateOptions = _.pick(truncateOptions, ['words', 'characters']);
 
         /*jslint regexp:true */
-        excerpt = String(this.title).replace(/<\/?[^>]+>/gi, '');
+        excerpt = String(t).replace(/<\/?[^>]+>/gi, '');
         /*jslint regexp:false */
 
         if (!truncateOptions.words && !truncateOptions.characters) {
