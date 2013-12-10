@@ -1,3 +1,7 @@
+# TODO
+- use bitly api to track /ime/fr/doc/1234 links
+- auto track [modes] and link them to the platform element (make it understand /ime/fr/mode/REF !)
+
 # medialab notes about this branch
 
 This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
@@ -143,6 +147,3 @@ en français
 <!-- en -->
 en anglais
 
-## TODO
-- post.tag in single view !
-- use bitly api to track /ime/fr/doc/1234 links
