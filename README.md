@@ -8,10 +8,11 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - i18n module to manage {{t 'string'}}
   - content/locales/*.json
 - routes
-  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243`)
+  - `/` to the homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
   - `/blog` and `/blog?p=234` redirect to the blog article (to keep running old blog links)
   - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-  - `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
+  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243`)
+  - `/inquiry` is the aime (Yii) platform (is routed by apache - outside this project)  
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
   - `core/client/router.js`
@@ -26,11 +27,11 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
   - `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
 
 - for the theme, please
-  - either
+  - either (better)
     - cd content/themes
     - git clone http://github.com/medialab/poltergeist.git
     - git pull
-  - either
+  - either (untested)
     - add in .submodules
       [submodule "content/themes/poltergeist"]
         path = content/themes/poltergeist
@@ -48,9 +49,11 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 
 ### Run
 #### Dev
+
   npm start
 
 #### Prod
+
   sudo supervisorctl restart aime_home_page
 
 Logs
