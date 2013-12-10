@@ -2,7 +2,7 @@
 	"folders":[
 		{
 			"file_exclude_patterns":[
-				"*.min..js"
+				"*.min.js"
 			],
 			"path": "."
 		}

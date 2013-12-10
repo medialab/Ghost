@@ -1,0 +1,9 @@
+[program:aime_home_page]
+command = node /chemin/vers/ghost/index.js
+directory = /chemin/vers/ghost
+user = ghost
+autostart = true
+autorestart = true
+stdout_logfile = /var/log/supervisor/ghost.log
+stderr_logfile = /var/log/supervisor/ghost_err.log
+environment = NODE_ENV="production"
