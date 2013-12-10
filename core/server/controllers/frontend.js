@@ -181,10 +181,12 @@ frontendControllers = {
             if (post) {
                 filters.doFilter('prePostsRender', post).then(function (post) {
                     var paths = config.paths().availableThemes[ghost.settings('activeTheme')];
+                        var cats = _.map(post.tags,function(t) { return t.name; });
+                        cats = _.intersection(cats,['event','discuss','material','tool']);
                     if (post.page && paths.hasOwnProperty('page')) {
-                        res.render('page', {post: post});
+                        res.render('page', {post:post, tag:cats.pop()});
                     } else {
-                        res.render('post', {post: post});
+                        res.render('post', {post:post, tag:cats.pop()});
                     }
                 });
             } else {
