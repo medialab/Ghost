@@ -648,14 +648,36 @@ registerHelpers = function (ghost, config) {
 
 
     // aime
+    // ### t Helper
+    //
+    // *Usage example:*
+    // `{{#t "key.%s" s="ciao"}}`
+    // or
+    // `{{#t "key.%s" "ciao"}}`
+    //
+    //
     registerThemeHelper('t', function(key, options){
       var k = key,
           t = '';
       if(typeof options == "string")
         k = key.replace('%s',options);
+      else if(options && options.hash.s)
+        k = key.replace('%s',options.hash.s);
       t = i18n.__(k)
       return t;    
     });
+
+    //
+    // ### If_locale Helper
+    // *Usage example:*
+    // `if_locale locale`
+    //
+    registerThemeHelper('if_locale', function(locale, options) {
+        if (locale == i18n.getLocale())
+            return options.fn(this);
+        return options.inverse(this);
+    });
+
     registerThemeHelper('aime_t', function(key, options){
       var k = key,
           t = '';
