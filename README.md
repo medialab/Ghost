@@ -6,35 +6,36 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 
 - patch to have prev/next links on single post - see [this](https://github.com/cobbspur/Ghost/commit/e38a6c02273b16ef44f0d77a61cd49ad6a7c89af#comments)
 - i18n module to manage {{t 'string'}}
-	- content/locales/*.json
+  - content/locales/*.json
 - routes
-	- `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-	- `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
-  - misc routes in `routes/frontend.js` for redirects
+  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243`)
+  - `/blog` and `/blog?p=234` redirect to the blog article (to keep running old blog links)
+  - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
+  - `/` to an homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
-	- `core/client/router.js`
-	- `core/client/view/blog.js`
+  - `core/client/router.js`
+  - `core/client/view/blog.js`
 
 ## Install
 
 - git clone medialab/Ghost
 
 - please adjust
-	- `config.js`
-	- `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
+  - `config.js`
+  - `content/data/ghost.db`sqlite database (owner need to be `ghost` user)
 
 - for the theme, please
-	- either
-		- cd content/themes
-		- git clone http://github.com/medialab/poltergeist.git
-		- git pull
-	- either
-		- add in .submodules
-			[submodule "content/themes/poltergeist"]
-				path = content/themes/poltergeist
-				url = git://github.com/medialab/poltergeist.git
-		- git pull
+  - either
+    - cd content/themes
+    - git clone http://github.com/medialab/poltergeist.git
+    - git pull
+  - either
+    - add in .submodules
+      [submodule "content/themes/poltergeist"]
+        path = content/themes/poltergeist
+        url = git://github.com/medialab/poltergeist.git
+    - git pull
 
 - sudo gem install sass
 - sudo gem install bourbon
@@ -69,29 +70,23 @@ Logs
 - ininteressant: 199, /where-standing/
 
 # Redirects
-## in articles
+## were updated in articles
 - `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
-
-## as route
-- `/blog/?p=x` > old blog 
-- `http://www/m...org/ime/fr/doc/24` > platform element
-
-## Redirections from wordpress to ghost:
-From `http://modesofexistence.org/blog/?p=X` to `http://modesofexistence.org/X` (using `wordpress_redirect_ids`)
-
-Pages are redirect to `/`
+- old blog links `/blog/?p=x` (see routes above)
+- platform elements `/ime/en/cont/123` (see routes above)
 
 ## Disqus translation .csv
 To be used in the disqs website under tools > migration
 
-(verify that no comment were posted at the last minute!)
+Comments on pages were deleted
 
-Comments on pages are deleted
-
-## Redirects
+## Redirect URLs
 following is stored in `config.js`
     
 > wordpress_redirect_ids = {
+  "511":  "clarifications-on-refocusing-the-aime-inquiry",
+  "499":  "seminary-at-the-namur-ulb-seminaire-a-luniversite-de-namur-ulb",
+  "493":  "refocusing-the-aime-inquiry-recentrer-lenquete-eme",
   "482":  "qa-n1-monday-9-december-between-530-and-730-p-m",
   "473":  "some-reflections-after-the-workshop-repc2b7ref",
   "464":  "chicago",
@@ -146,4 +141,5 @@ en français
 en anglais
 
 ## TODO
+- post.tag in single view !
 - use bitly api to track /ime/fr/doc/1234 links

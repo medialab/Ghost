@@ -12,7 +12,7 @@ module.exports = function (server) {
 
     // aime
     
-    // redirect old blog posts
+    // redirect old blog posts (root /blog/ but also /blog/?p=323 pages)
     server.get('/blog/', frontend.oldposts);
 
     // list of all blog posts
