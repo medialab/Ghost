@@ -55,23 +55,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 4766,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config.js",
-			"settings":
-			{
-				"buffer_size": 6552,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server/routes/frontend.js",
-			"settings":
-			{
-				"buffer_size": 988,
+				"buffer_size": 5047,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,39 +63,7 @@
 			"file": "core/server/controllers/frontend.js",
 			"settings":
 			{
-				"buffer_size": 10371,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server/models/post.js",
-			"settings":
-			{
-				"buffer_size": 16214,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/post.hbs",
-			"settings":
-			{
-				"buffer_size": 97,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/loop-single.hbs",
-			"settings":
-			{
-				"buffer_size": 1879,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/pagination-single.hbs",
-			"settings":
-			{
-				"buffer_size": 192,
+				"buffer_size": 10584,
 				"line_ending": "Unix"
 			}
 		}
@@ -184,16 +136,40 @@
 	},
 	"file_history":
 	[
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/post.hbs",
-		"/Users/pierre/poa/Ghost/core/server/api/index.js",
-		"/Users/pierre/poa/Ghost/core/server/models/post.js",
-		"/Users/pierre/poa/Ghost/config.example.js",
-		"/Users/pierre/poa/Ghost/core/server/helpers/index.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-introduction.hbs",
+		"/Users/pierre/poa/Ghost/content/locales/fr.json",
+		"/Users/pierre/poa/Ghost/content/locales/en.json",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/secondary-menu.hbs",
 		"/Users/pierre/poa/Ghost/.gitignore",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/header-blog.hbs",
+		"/Users/pierre/poa/Ghost/config.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/default.hbs",
+		"/Users/pierre/poa/Ghost/core/server/routes/frontend.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/style.less",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single-thumb.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-project.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/blog-menu.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/timeline.hbs",
+		"/Users/pierre/poa/Ghost/aime-blog.sublime-project",
+		"/Users/pierre/Downloads/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/vendor/jquery-ui.easing.min.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/general.js",
+		"/Users/pierre/poa/Ghost/README.md",
+		"/Users/pierre/Downloads/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/timeline.css",
+		"/Users/pierre/poa/Ghost/core/server/helpers/index.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/vendor/timeline-min.js",
+		"/Users/pierre/poa/Ghost/core/server/controllers/frontend.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/vendor/storyjs.embed.js",
+		"/Users/pierre/poa/Ghost/core/server/models/post.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/pagination-single.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/post.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single.hbs",
+		"/Users/pierre/poa/Ghost/core/server/api/index.js",
+		"/Users/pierre/poa/Ghost/config.example.js",
 		"/Users/pierre/poa/Ghost/core/server/config/loader.js",
 		"/Volumes/leela/aime_home_page/config.js",
 		"/Users/pierre/poa/Ghost/core/server.js",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/default.hbs",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-archive.hbs",
 		"/Users/pierre/poa/Ghost/core/server/data/default-settings.json",
 		"/Users/pierre/poa/Ghost/README_migration.md",
@@ -287,31 +263,7 @@
 		"/Users/pierre/poa/aime/js/display/modules/layout.js",
 		"/Users/pierre/poa/aime/protected/components/LangBehavior.php",
 		"/Users/pierre/poa/aime/protected/models/ResetPassword.php",
-		"/Users/pierre/poa/aime/protected/controllers/BookItemsController.php",
-		"/Users/pierre/poa/aime/protected/controllers/ItemController.php",
-		"/Users/pierre/poa/aime/protected/controllers/ItemsController.php",
-		"/Users/pierre/poa/aime/protected/extensions/yii-mail/YiiMailMessage.php",
-		"/Users/pierre/poa/aime/js/index.js",
-		"/Users/pierre/poa/aime/protected/views/layouts/userprofile.php",
-		"/Users/pierre/poa/aime/protected/controllers/SiteController.php",
-		"/Users/pierre/poa/aime/protected/controllers/DocumentItemsController.php",
-		"/Users/pierre/poa/aime/protected/controllers/VocabItemsController.php",
-		"/Users/pierre/poa/aime/protected/controllers/ItemBaseController.php",
-		"/Users/pierre/poa/aime/protected/components/Book.php",
-		"/Users/pierre/poa/aime/protected/widgets/views/LangBox.php",
-		"/Users/pierre/poa/aime/protected/controllers/ImportController.php",
-		"/Users/pierre/poa/aime/protected/controllers/RenderController.php",
-		"/Users/pierre/poa/aime/protected/views/layouts/book.php",
-		"/Users/pierre/poa/aime/protected/views/render/index.php",
-		"/Users/pierre/poa/aime/protected/widgets/LangBox.php",
-		"/Users/pierre/poa/parismap/workers/twitter/twitter_listener.js",
-		"/Users/pierre/poa/aime/protected/views/items/view.php",
-		"/Users/pierre/poa/aime/.htaccess",
-		"/Users/pierre/poa/aime/protected/views/render/view.php",
-		"/Users/pierre/poa/aime/protected/runtime/application.log.2",
-		"/Users/pierre/poa/aime/protected/runtime/application.log.1",
-		"/Users/pierre/poa/aime/protected/runtime/application.log",
-		"/Users/pierre/poa/aime/protected/modules/admin/controllers/DefaultController.php"
+		"/Users/pierre/poa/aime/protected/controllers/BookItemsController.php"
 	],
 	"find":
 	{
@@ -355,6 +307,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deny the problem",
+			"give up",
+			"Should we give up",
+			"loop-single-tags",
+			"poltergeist",
+			"submodules",
+			"update_submodules",
+			"timeline.css",
+			"346",
+			"362",
+			"pol.cached.timeline",
+			"create_timeline",
+			"timeline",
+			"content",
+			"storyjs",
+			"timeline",
 			"coreHelpers.url",
 			"coreHelpers.pageUrl",
 			"url",
@@ -466,23 +434,7 @@
 			"jQuery('#log",
 			"log",
 			"jQuery('#",
-			"register-popup-caller",
-			"requestResetPassword",
-			"Mot de passe oublié ?",
-			"requestResetPassword",
-			" research has received funding f",
-			"requestResetPassword",
-			"email ne peut être vide",
-			"credits-popup",
-			"credits",
-			"-bod",
-			"-bof",
-			"-bod",
-			"reg",
-			"register",
-			"login  ",
-			"login",
-			"login "
+			"register-popup-caller"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -508,7 +460,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -516,22 +468,20 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 4766,
+						"buffer_size": 5047,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								1291,
+								1291
 							]
 						],
 						"settings":
 						{
-							"parser": "github",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"target": "disk"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -541,96 +491,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "config.js",
-					"settings":
-					{
-						"buffer_size": 6552,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3970,
-								3854
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "core/server/routes/frontend.js",
-					"settings":
-					{
-						"buffer_size": 988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								850,
-								850
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "core/server/controllers/frontend.js",
 					"settings":
 					{
-						"buffer_size": 10371,
+						"buffer_size": 10584,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6370,
-								6370
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 1.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "core/server/models/post.js",
-					"settings":
-					{
-						"buffer_size": 16214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9064,
-								9064
+								6726,
+								6605
 							]
 						],
 						"settings":
@@ -638,85 +510,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3184.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "content/themes/poltergeist/post.hbs",
-					"settings":
-					{
-						"buffer_size": 97,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								80,
-								80
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "content/themes/poltergeist/partials/loop-single.hbs",
-					"settings":
-					{
-						"buffer_size": 1879,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								74,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "content/themes/poltergeist/partials/pagination-single.hbs",
-					"settings":
-					{
-						"buffer_size": 192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								49
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2272.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
