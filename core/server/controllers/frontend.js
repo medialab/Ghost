@@ -23,9 +23,10 @@ var i18n = require('i18n');
 frontendControllers = {
 
     // aime
-    shortener: function(req, res, next) {
+    shortenerElements: function(req, res, next) {
       try {
-        var inquiryBase = config().inquiry_url+'/index.php/?lang='+req.params.lang,
+        var lang = req.params.lang,
+            inquiryBase = config().inquiry_url+'/index.php/?lang='+lang,
             type = req.params.type,
             id = req.params.id,
             trans = {
@@ -33,25 +34,52 @@ frontendControllers = {
               'doc':'doc',
               'cont':'cont',
             };
-      
-        var idstr = trans[type]+"-"+id;
+        
+        if(isNaN(parseInt(id))) {
+          var modecross = config().modecross_ids;
+          if(modecross.hasOwnProperty(lang)) {
+            var spl = id.split("-");
+            if(spl.length==1) {
+              if(modecross[lang].hasOwnProperty(id)) {
+                id = modecross[lang][id];
+              } else
+                throw "unknown mode: "+id;
+            } else if(spl.length==2) {
+              var reversed = spl[1]+"-"+spl[0];
+              if(modecross[lang].hasOwnProperty(id)) {
+                id = modecross[lang][id];
+              } else if(modecross[lang].hasOwnProperty(reversed)) {
+                id = modecross[lang][reversed];
+              } else throw "unknown cross: "+id; 
+            } else throw "bad form: "+id;
+          } else throw "unknown lang: "+lang;
+        }
+        
+        if(trans.hasOwnProperty(type))
+          var idstr = trans[type]+"-"+id;
+        else throw "unknown type: "+type;
+
         var tu = type.toUpperCase();
         var hash = '#a=SET+'+tu+'+LEADER&c[leading]='+tu+'&i[id]=#'+idstr+'&i[column]='+tu;
+        
         if(type=='cont')
           hash = '#a=CONTRIB&c[leading]=COM&i[id]=#'+idstr+'&i[column]=COM';
+        
+        console.log(hash);
+        
+        return res.redirect(inquiryBase + hash);
+
       } catch(err) {
-        var e = new Error(err.message);
+        var e = new Error(err);
         e.status = err.errorCode;
         return next(e); 
       }
-      console.log(hash);
-      return res.redirect(inquiryBase + hash);
     },
     oldposts: function(req, res, next) {
       var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;
       var pid = req.param('p');
       if(pid) {
-        var slug = config().wordpress_redirect_ids[pid] || '/';
+        var slug = config().wordpress_redirects[pid] || '/';
         console.log("redirect to: "+slug);
         return res.redirect(root +'/'+ slug);
       } else {

@@ -26,7 +26,7 @@ module.exports = function (server) {
     server.get('/lang/:lang/', frontend.setlang);
 
     // redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
-    server.get('/ime/:lang/:type/:id/', frontend.shortener);
+    server.get('/ime/:lang/:type/:id/', frontend.shortenerElements);
 
     // home
     server.get('/', frontend.homepage);

@@ -1,5 +1,6 @@
 mapping = {};
 
+// those mappings were obtained from console after looking at the exported data (aime-api)
 mapping.modecross = {
   'en': {
     "ATT": "62",
@@ -181,6 +182,7 @@ mapping.modecross = {
   }
 };
 
+// thos mappings were written manually to redirect old blog posts
 mapping.wordpress = {
     "511":  "clarifications-on-refocusing-the-aime-inquiry",
     "499":  "seminary-at-the-namur-ulb-seminaire-a-luniversite-de-namur-ulb",
