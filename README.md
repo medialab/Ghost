@@ -15,7 +15,7 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
   - `/` to the homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
   - `/blog` and `/blog?p=234` redirect to the blog article (to keep running old blog links)
   - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243`)
+  - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243` but also `/ime/fr/voc/DRO` and `/ime/en/voc/REF-REP`)
   - `/inquiry` is the aime (Yii) platform (is routed by apache - outside this project)  
 - some helpers (end of `helpers/index.js`)
 - admin list of posts: `published_at` sort rather than `updated_at`
