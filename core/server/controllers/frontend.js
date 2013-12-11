@@ -20,6 +20,9 @@ var Ghost   = require('../../ghost'),
 // aime
 var i18n = require('i18n');
 
+// ( to be moved to config.js ? ) following to also give current tag to the template when looking at an article
+var ourCategories = ['event','discuss','material','tool'];
+
 frontendControllers = {
 
     // aime
@@ -210,7 +213,7 @@ frontendControllers = {
                 filters.doFilter('prePostsRender', post).then(function (post) {
                     var paths = config.paths().availableThemes[ghost.settings('activeTheme')];
                         var cats = _.map(post.tags,function(t) { return t.name; });
-                        cats = _.intersection(cats,['event','discuss','material','tool']);
+                        cats = _.intersection(cats,ourCategories);
                     if (post.page && paths.hasOwnProperty('page')) {
                         res.render('page', {post:post, tag:cats.pop()});
                     } else {
