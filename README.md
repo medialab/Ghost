@@ -1,5 +1,5 @@
 # TODO
-- use bitly api to track /ime/fr/doc/1234 links
+- use bitly api to track /ime/fr/doc/1234 links automatically
 - auto track [modes] and link them to the platform element (make it understand /ime/fr/mode/REF !)
 
 # medialab notes about this branch

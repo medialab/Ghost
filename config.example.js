@@ -2,13 +2,15 @@
 // Setup your Ghost install for various environments
 
 var path = require('path'),
+    mapping = require('./config_mappings.js'),
     config;
 
 config = {
     // ### Development **(default)**
-    wordpress_redirect_ids: { '45': 'newslug' },
-    inquiry_url: 'http://modesofexistence.org/inquiry',
     development: {
+        wordpress_redirects: mapping.wordpress,
+        modecross_ids: mapping.modecross,
+        inquiry_url: 'http://modesofexistence.org/inquiry',
         // The url to use when providing links to the site, E.g. in RSS and email.
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
         url: 'http://my-ghost-blog.com',
@@ -47,7 +49,8 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        wordpress_redirect_ids: { '45': 'newslug' },
+        wordpress_redirects: mapping.wordpress,
+        modecross_ids: mapping.modecross,
         inquiry_url: 'http://modesofexistence.org/inquiry',
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
         url: 'http://my-ghost-blog.com',
