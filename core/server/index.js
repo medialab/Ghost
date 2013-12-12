@@ -70,8 +70,20 @@ function setup(server) {
         // ## Middleware
         middleware(server);
 
-
         // aime
+        
+        // CORS support - must be after body parser middleware
+        server.all('*', function (req, res, next) {
+          res.set('Access-Control-Allow-Origin', '*');
+          res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+          res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+
+          if('OPTIONS' == req.method) {
+            return res.send(200);
+          }
+          next();
+        });
+
         server.configure(function() {
             server.use(i18n.init);
         });

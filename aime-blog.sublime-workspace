@@ -86,6 +86,22 @@
 				"buffer_size": 22163,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "content/locales/en.json",
+			"settings":
+			{
+				"buffer_size": 80584,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/locales/fr.json",
+			"settings":
+			{
+				"buffer_size": 86840,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -581,7 +597,59 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "content/locales/en.json",
+					"settings":
+					{
+						"buffer_size": 80584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16040,
+								16040
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 338.0,
+						"translation.y": 1282.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "content/locales/fr.json",
+					"settings":
+					{
+						"buffer_size": 86840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16772,
+								16772
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 161.0,
+						"translation.y": 1281.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
