@@ -56,51 +56,35 @@
 	"buffers":
 	[
 		{
-			"file": "content/locales/fr.json",
-			"settings":
-			{
-				"buffer_size": 85225,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/locales/en.json",
-			"settings":
-			{
-				"buffer_size": 79391,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/section-network.hbs",
-			"settings":
-			{
-				"buffer_size": 2743,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/footer.hbs",
-			"settings":
-			{
-				"buffer_size": 292,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/partials/disclaimers.hbs",
-			"settings":
-			{
-				"buffer_size": 1751,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "content/themes/poltergeist/partials/section-phases.hbs",
 			"settings":
 			{
-				"buffer_size": 935,
+				"buffer_size": 900,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/partials/section-faq.hbs",
+			"settings":
+			{
+				"buffer_size": 839,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/partials/section-project.hbs",
+			"settings":
+			{
+				"buffer_size": 823,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/css/style.less",
+			"settings":
+			{
+				"buffer_size": 22163,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -172,28 +156,41 @@
 	},
 	"file_history":
 	[
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/header-blog.hbs",
-		"/Users/pierre/poa/Ghost/core/server/helpers/index.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/general.js",
 		"/Users/pierre/poa/Ghost/content/locales/fr.json",
 		"/Users/pierre/poa/Ghost/content/locales/en.json",
-		"/Users/pierre/poa/Ghost/core/server/controllers/frontend.js",
 		"/Users/pierre/poa/Ghost/README.md",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-project.hbs",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-network.hbs",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-introduction.hbs",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/secondary-menu.hbs",
-		"/Users/pierre/poa/Ghost/.gitignore",
-		"/Users/pierre/poa/Ghost/config.js",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/default.hbs",
+		"/Users/pierre/poa/Ghost/core/server/controllers/frontend.js",
+		"/Users/pierre/poa/Ghost/config_mappings.js",
+		"/Users/pierre/poa/Ghost/package.json",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/index.hbs",
 		"/Users/pierre/poa/Ghost/core/server/routes/frontend.js",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/style.less",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single-thumb.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-phases.hbs",
+		"/Users/pierre/poa/Ghost/config.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/header-blog.hbs",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/blog-menu.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-network.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/style.less",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-tools.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-faq.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single-tags.hbs",
+		"/Users/pierre/poa/Ghost/config.example.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single.hbs",
+		"/Users/pierre/poa/Ghost/core/server/helpers/index.js",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/secondary-menu.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-updates.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/disclaimers.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/footer.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/copyrights.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-project.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/section-introduction.hbs",
+		"/Users/pierre/poa/Ghost/.gitignore",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/default.hbs",
+		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single-thumb.hbs",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/timeline.hbs",
 		"/Users/pierre/poa/Ghost/aime-blog.sublime-project",
 		"/Users/pierre/Downloads/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/vendor/jquery-ui.easing.min.js",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/general.js",
 		"/Users/pierre/Downloads/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/timeline.css",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/vendor/timeline-min.js",
@@ -201,9 +198,7 @@
 		"/Users/pierre/poa/Ghost/core/server/models/post.js",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/pagination-single.hbs",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/post.hbs",
-		"/Users/pierre/poa/Ghost/content/themes/poltergeist/partials/loop-single.hbs",
 		"/Users/pierre/poa/Ghost/core/server/api/index.js",
-		"/Users/pierre/poa/Ghost/config.example.js",
 		"/Users/pierre/poa/Ghost/core/server/config/loader.js",
 		"/Volumes/leela/aime_home_page/config.js",
 		"/Users/pierre/poa/Ghost/core/server.js",
@@ -288,18 +283,7 @@
 		"/Users/pierre/poa/aime/js/display/modules/editor.js",
 		"/Users/pierre/poa/aime/aime-api/server/app/models/book.js",
 		"/Users/pierre/poa/aime/aime-api/server/public/data/book_fr.json",
-		"/Users/pierre/poa/aime/aime-api/server/config/config.js",
-		"/Users/pierre/poa/aime/aime-api/client/myjs/bam.ang.js",
-		"/Users/pierre/poa/aime/aime-api/client/book_charts.html",
-		"/Users/pierre/poa/aime/aime-api/client/partials/book.html",
-		"/Users/pierre/poa/aime/aime-api/server/public/data/book_en.json",
-		"/Users/pierre/poa/aime/aime-api/server/public/data/exported_en.json",
-		"/Users/pierre/poa/aime/aime-api/server/public/data/exported_fr.json",
-		"/Users/pierre/poa/aime.sublime-project",
-		"/Users/pierre/poa/aime/js/display/modules/location.js",
-		"/Users/pierre/poa/aime/js/display/modules/layout.js",
-		"/Users/pierre/poa/aime/protected/components/LangBehavior.php",
-		"/Users/pierre/poa/aime/protected/models/ResetPassword.php"
+		"/Users/pierre/poa/aime/aime-api/server/config/config.js"
 	],
 	"find":
 	{
@@ -307,7 +291,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/pierre/poa/Ghost/, -*.min.js",
@@ -343,6 +327,69 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"402",
+			"25",
+			"491",
+			"199",
+			"402",
+			"416",
+			"199",
+			"font",
+			"h2",
+			"content",
+			"h3",
+			"362",
+			"tuto",
+			"362",
+			"collaborat",
+			"post.filedunder",
+			"filed under",
+			"field",
+			"plique",
+			"best use o",
+			"le site a été test",
+			"le site a été testé",
+			"le site a été testé la",
+			"le site a été testé ",
+			"tools.guide",
+			"google chro",
+			"platform",
+			"augmented",
+			"navigateur",
+			"navigat",
+			"content",
+			"text-decor",
+			"text-decor	",
+			"alexis",
+			"blog.tag.",
+			"discuss",
+			"ourCategories",
+			"header-home",
+			"express",
+			"logs",
+			"log",
+			"main­tained a kind of",
+			" ?",
+			" ?",
+			" ?",
+			" ?",
+			"network.",
+			"network",
+			"ntwork",
+			"The Network",
+			"latest from the blog",
+			"comp lex­ity ",
+			"comple ",
+			"and hopes",
+			"augmented",
+			"so far",
+			"prop­erly with you",
+			"join the",
+			"join",
+			"locale",
+			"getlocale",
+			"handcra",
+			"hanfcra",
 			"network.headline",
 			"phases.phase-one.abstract",
 			"collaborat",
@@ -407,70 +454,7 @@
 			"config",
 			"config(",
 			"wordpress_redirect",
-			"sciences",
-			"sc",
-			"init",
-			"60",
-			"postsPerPage",
-			"60",
-			"postsPerPage",
-			"excvar",
-			"aime_conte",
-			"downsize",
-			"aime_excerpt",
-			"lang/",
-			"the phases",
-			"LANG_TEST",
-			"marche",
-			"the phases",
-			"url",
-			"config",
-			"baseurl",
-			"aime_content",
-			"route",
-			"route\n",
-			"route",
-			"getlocale",
-			"filteredUserAttributes",
-			"title",
-			"prePostsRender",
-			"console.log(",
-			"findAll",
-			"findall",
-			"findPage",
-			"tags",
-			"findAll",
-			"browse",
-			"Post.brow",
-			"post.brow",
-			"prePostsRender",
-			"\":[",
-			"search",
-			"options",
-			"fetch",
-			"findall",
-			"ghostBookshelf",
-			"Post.findPage",
-			"findall",
-			"importJson",
-			"nestedSetBehavior",
-			"nes",
-			"maze.events",
-			"export json",
-			"maze.engine.parser",
-			"signin-popup",
-			"Un problème est survenu. merci de contacter l'équipe",
-			"validat",
-			"passw",
-			"redirec",
-			"77",
-			"GO_TO_HOME",
-			"logo",
-			"phpcode",
-			"validateEmail",
-			"performAjaxValidation",
-			"requestResetPassword",
-			"forgotPasswordHead"
+			"sciences"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -496,54 +480,53 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "content/locales/fr.json",
+					"file": "content/themes/poltergeist/partials/section-phases.hbs",
 					"settings":
 					{
-						"buffer_size": 85225,
+						"buffer_size": 900,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40892,
-								40892
+								888,
+								888
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3414.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "content/locales/en.json",
+					"file": "content/themes/poltergeist/partials/section-faq.hbs",
 					"settings":
 					{
-						"buffer_size": 79391,
+						"buffer_size": 839,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								230,
-								230
+								390,
+								390
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -553,18 +536,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "content/themes/poltergeist/partials/section-network.hbs",
+					"file": "content/themes/poltergeist/partials/section-project.hbs",
 					"settings":
 					{
-						"buffer_size": 2743,
+						"buffer_size": 823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								568,
-								552
+								375,
+								375
 							]
 						],
 						"settings":
@@ -579,18 +562,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "content/themes/poltergeist/partials/footer.hbs",
+					"file": "content/themes/poltergeist/css/style.less",
 					"settings":
 					{
-						"buffer_size": 292,
+						"buffer_size": 22163,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2794,
+								2794
 							]
 						],
 						"settings":
@@ -598,59 +581,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "content/themes/poltergeist/partials/disclaimers.hbs",
-					"settings":
-					{
-						"buffer_size": 1751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								598,
-								598
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 295.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "content/themes/poltergeist/partials/section-phases.hbs",
-					"settings":
-					{
-						"buffer_size": 935,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -699,6 +630,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"styl",
+				"content/themes/poltergeist/css/style.less"
+			],
+			[
+				"style.less",
+				"content/themes/poltergeist/css/style.less"
+			],
 			[
 				"item",
 				"protected/models/Item.php"
@@ -789,10 +728,6 @@
 			],
 			[
 				"style.l",
-				"css/display/style.less"
-			],
-			[
-				"style.less",
 				"css/display/style.less"
 			],
 			[
@@ -890,6 +825,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 224.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true
 }
