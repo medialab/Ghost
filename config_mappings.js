@@ -200,6 +200,7 @@ mapping.wordpress = {
     "376":  "lifecycle-of-contributions-2",
     "358":  "what-is-a-contribution",
     "346":  "tuto-contribution",
+    "362":  "tuto-contribution",
     "342":  "reading-experiences",
     "308":  "faq-why-15-modes-pourquoi-15-modes",
     "274":  "workshop-with-mediators",

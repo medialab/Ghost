@@ -80,7 +80,7 @@ frontendControllers = {
     },
     oldposts: function(req, res, next) {
       var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;
-      var pid = req.param('p');
+      var pid = req.param('p') || req.param('page_id');
       if(pid) {
         var slug = config().wordpress_redirects[pid] || '/';
         console.log("redirect to: "+slug);
