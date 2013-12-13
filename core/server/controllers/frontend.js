@@ -39,6 +39,7 @@ frontendControllers = {
             };
         
         if(isNaN(parseInt(id))) {
+          id = id.toUpperCase();
           var modecross = config().modecross_ids;
           if(modecross.hasOwnProperty(lang)) {
             var spl = id.split("-");
