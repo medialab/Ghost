@@ -592,6 +592,32 @@ function registerAsyncThemeHelper(name, fn) {
     });
 }
 
+// replace [MODES] and [CR-ROSS] to styled links to platform elements
+function styleModeCross(str,link) {
+  var c = "$1·$2",
+      m = "$1";
+  if(link) {
+    var lang = i18n.getLocale();
+    var baseurl = coreHelpers.config().url;
+    c = "<a href='"+baseurl+"/ime/"+lang+"/voc/$1-$2' target='_blank'>"+c+"</a>";
+    m = "<a href='"+baseurl+"/ime/"+lang+"/voc/$1' target='_blank'>"+m+"</a>";
+  }
+  var cross = "<span class='modes'>[<span class='smallcaps'>"+c+"</span>]</span>";
+  var mode = "<span class='modes'>[<span class='smallcaps'>"+m+"</span>]</span>";
+  return str
+    .replace(/\[([A-Z]{2,})[\.-·•]([A-Z]{2,})\]/g, cross)
+    .replace(/\[([A-Z]{2,})\]/g, mode);
+};
+  // .replace(/\[[^\]]*\]/g,function(s){
+  //   // bullet replace + encapsulating whole
+  //   return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
+  // })
+  // .replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]{2,}/g,function(s){
+  //   // smallcaps inthere
+  //   return "<span class='smallcaps'>" + s + "</span>"
+  // });
+//};
+
 registerHelpers = function (ghost, config) {
     var paginationHelper;
 
@@ -683,55 +709,22 @@ registerHelpers = function (ghost, config) {
           t = '';
       if(typeof options == "string")
         k = key.replace('%s',options);
-      t = i18n.__(k)
-          .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
-          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
-            return "<span class='smallcaps'>" + s + "</span>"
-          });
+      t = styleModeCross(i18n.__(k),true);
       return t;    
     });
     registerThemeHelper('getlocale', function(key){
       return i18n.__(i18n.getLocale());
     });
+
+    // please check if following is really use. if not, trash it
     registerThemeHelper('decorate', function( text ) {
       if( typeof text == "undefined" )
         return '';
 
       // return window['Hypher']['languages']['fr'].hyphenateText(text)
-      return text
-        .replace(/\[[^\]]*\]/g,function(s){
-          return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
-        }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g,function(s){
-          return "<span class='smallcaps'>" + s + "</span>"
-        })
+      return styleModeCross(text,false);
 
       // return text.replace(/(\s+([;:]))/g,function( a,b ){return "&nbsp;PPPPPPPP" + a.replace(/\s/,'')});
-    });
-    registerThemeHelper('aime_excerpt', function (options) {
-        var truncateOptions = (options || {}).hash || {},
-            excerpt;
-
-        truncateOptions = _.pick(truncateOptions, ['words', 'characters']);
-
-        /*jslint regexp:true */
-        excerpt = String(this.html).replace(/<\/?[^>]+>/gi, '');
-        /*jslint regexp:false */
-
-        if (!truncateOptions.words && !truncateOptions.characters) {
-            truncateOptions.words = 50;
-        }
-
-        excerpt = downsize(excerpt, truncateOptions)
-          .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
-          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
-            return "<span class='smallcaps'>" + s + "</span>"
-          });
-
-        return new hbs.handlebars.SafeString(
-          excerpt
-        );
     });
     registerThemeHelper('siteurl', function (options) {
       return coreHelpers.config().url;
@@ -745,11 +738,7 @@ registerHelpers = function (ghost, config) {
           t = splitted[lang=='en' ? 0 : 1];
         else
           t = this.title;
-        t = t.replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
-          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
-            return "<span class='smallcaps'>" + s + "</span>"
-          });
+        t = styleModeCross(t, false);
         return t;
     });
     registerThemeHelper('aime_content', function (options) {
@@ -774,16 +763,11 @@ registerHelpers = function (ghost, config) {
         if (truncateOptions.words || truncateOptions.characters) {
           content = String(content).replace(/<\/?[^>]+>/gi, '');
           content = downsize(content, truncateOptions);
+          // do not insert links if excerpt !
+          content = styleModeCross(content, false);
+        } else {
+          content = styleModeCross(content, true);
         }
-
-        // temp comment following to avoid breaking images [im.jpg] links
-
-        // content = content
-        //    .replace(/\[[^\]]*\]/g, function(s) {
-        //     return "<span class='modes'>" + s.replace(/[^\w\[·\]]/g,'') + "</span>"
-        //    }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]{2,}/g, function(s) {
-        //     return "<span class='smallcaps'>" + s + "</span>"
-        //    });
 
         return new hbs.handlebars.SafeString(content);
     });
@@ -808,12 +792,7 @@ registerHelpers = function (ghost, config) {
             truncateOptions.words = 10;
         }
 
-        excerpt = downsize(excerpt, truncateOptions)
-          .replace(/\[[^\]]*\]/g, function(s) {
-            return "<span class='modes'>" + s.replace(/[^\w\[·\]\.]/g,'').replace('.','·') + "</span>"
-          }).replace(/[A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ][A-ZÀÁÂÈÉÊÌÍÎÏÇÒÓÔŒÙÚÛ]+/g, function(s) {
-            return "<span class='smallcaps'>" + s + "</span>"
-          });
+        excerpt = styleModeCross( downsize(excerpt, truncateOptions), false );
 
         return new hbs.handlebars.SafeString(
           excerpt

@@ -17,7 +17,7 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
   - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
   - `/ime/:lang/:type/:id` redirect to the platform element (ex: `/ime/fr/doc/1243` but also `/ime/fr/voc/DRO` and `/ime/en/voc/REF-REP`)
   - `/inquiry` is the aime (Yii) platform (is routed by apache - outside this project)  
-- some helpers (end of `helpers/index.js`)
+- some helpers (end of `helpers/index.js`) (i18n versions, styling of [MODES], ...)
 - admin list of posts: `published_at` sort rather than `updated_at`
   - `core/client/router.js`
   - `core/client/view/blog.js`
