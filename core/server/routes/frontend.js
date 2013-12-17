@@ -28,7 +28,7 @@ module.exports = function (server) {
     // redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
     server.get('/ime/:lang/:type/:id/', frontend.shortenerElements);
 
-    // home
+    // home (nb: js in our theme will redirect to platform if there is an hash to platform)
     server.get('/', frontend.homepage);
 
     // end aime

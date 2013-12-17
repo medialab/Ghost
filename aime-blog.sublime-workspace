@@ -62,6 +62,22 @@
 				"buffer_size": 1038,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "content/locales/en.json",
+			"settings":
+			{
+				"buffer_size": 80615,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/locales/fr.json",
+			"settings":
+			{
+				"buffer_size": 86863,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -267,7 +283,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/pierre/poa/Ghost/, -*.min.js",
@@ -303,6 +319,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ricci",
 			"analytics",
 			"aime_t ",
 			"aime_t",
@@ -429,8 +446,7 @@
 			"Jacom",
 			"Fuentes",
 			"this t",
-			"this tur",
-			"join"
+			"this tur"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -456,7 +472,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
@@ -471,8 +486,8 @@
 						"selection":
 						[
 							[
-								514,
-								514
+								487,
+								487
 							]
 						],
 						"settings":
@@ -481,6 +496,58 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "content/locales/en.json",
+					"settings":
+					{
+						"buffer_size": 80615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16863,
+								16863
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 126.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "content/locales/fr.json",
+					"settings":
+					{
+						"buffer_size": 86863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18701,
+								18701
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 18.0,
+						"translation.y": 1623.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
