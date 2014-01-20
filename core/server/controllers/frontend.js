@@ -33,44 +33,56 @@ frontendControllers = {
             type = req.params.type,
             id = req.params.id,
             trans = {
-              'voc':'vocab',
-              'doc':'doc',
-              'cont':'cont',
+                'book':'book',
+                'voc':'vocab',
+                'doc':'doc',
+                'cont':'cont',
             };
         
+        // if the id is not a number, check MODE/CROSS
         if(isNaN(parseInt(id))) {
-          id = id.toUpperCase();
-          var modecross = config().modecross_ids;
-          if(modecross.hasOwnProperty(lang)) {
-            var spl = id.split("-");
-            if(spl.length==1) {
-              if(modecross[lang].hasOwnProperty(id)) {
-                id = modecross[lang][id];
-              } else
-                throw "unknown mode: "+id;
-            } else if(spl.length==2) {
-              var reversed = spl[1]+"-"+spl[0];
-              if(modecross[lang].hasOwnProperty(id)) {
-                id = modecross[lang][id];
-              } else if(modecross[lang].hasOwnProperty(reversed)) {
-                id = modecross[lang][reversed];
-              } else throw "unknown cross: "+id; 
-            } else throw "bad form: "+id;
-          } else throw "unknown lang: "+lang;
+            id = id.toUpperCase();
+            var modecross = config().modecross_ids;
+            if(modecross.hasOwnProperty(lang)) {
+                var spl = id.split("-");
+                if(spl.length==1) {
+                    if(modecross[lang].hasOwnProperty(id)) {
+                        id = modecross[lang][id];
+                    } else
+                        throw "unknown mode: "+id;
+                } else if(spl.length==2) {
+                    var reversed = spl[1]+"-"+spl[0];
+                    if(modecross[lang].hasOwnProperty(id)) {
+                        id = modecross[lang][id];
+                    } else if(modecross[lang].hasOwnProperty(reversed)) {
+                        id = modecross[lang][reversed];
+                    } else throw "unknown cross: "+id; 
+                } else throw "bad form: "+id;
+            } else throw "unknown lang: "+lang;
         }
         
-        if(trans.hasOwnProperty(type))
-          var idstr = trans[type]+"-"+id;
-        else throw "unknown type: "+type;
+        if(trans.hasOwnProperty(type)) {
+            if(type=='book') {
+                var bc_id = id.split(",")[0];
+                var bsc_id = id.split(",")[1];
+            } else {
+                var idstr = trans[type]+"-"+id;
+            }
+        } else
+            throw "unknown type: "+type;
 
         var tu = type.toUpperCase();
-        var hash = '#a=SET+'+tu+'+LEADER&c[leading]='+tu+'&i[id]=#'+idstr+'&i[column]='+tu;
-        
+        var hash = '';
+
+        if(type=='doc' || type=='voc')
+            hash = '#a=SET+'+tu+'+LEADER&c[leading]='+tu+'&i[id]=#'+idstr+'&i[column]='+tu;
         if(type=='cont')
-          hash = '#a=CONTRIB&c[leading]=COM&i[id]=#'+idstr+'&i[column]=COM';
-        
+            hash = '#a=CONTRIB&c[leading]=COM&i[id]=#'+idstr+'&i[column]=COM';
+        if(type=='book')
+            hash = '#b[chapter]=#'+bc_id+'&b[subheading]=#'+bsc_id+'&a=SET+TEXT+LEADER&c[leading]=TEXT';
+
         console.log(hash);
-        
+            
         return res.redirect(inquiryBase + hash);
 
       } catch(err) {

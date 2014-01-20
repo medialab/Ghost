@@ -59,7 +59,7 @@
 			"file": "core/server/routes/frontend.js",
 			"settings":
 			{
-				"buffer_size": 1038,
+				"buffer_size": 1118,
 				"line_ending": "Unix"
 			}
 		},
@@ -76,6 +76,22 @@
 			"settings":
 			{
 				"buffer_size": 86863,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "core/server/controllers/frontend.js",
+			"settings":
+			{
+				"buffer_size": 11747,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content/themes/poltergeist/js/general.js",
+			"settings":
+			{
+				"buffer_size": 13735,
 				"line_ending": "Unix"
 			}
 		}
@@ -319,6 +335,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"location",
+			"setlocactop",
+			"setloc",
+			"get",
 			"ricci",
 			"analytics",
 			"aime_t ",
@@ -442,11 +462,7 @@
 			"terms of us",
 			"terms",
 			"locale",
-			"lang",
-			"Jacom",
-			"Fuentes",
-			"this t",
-			"this tur"
+			"lang"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -472,6 +488,7 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -479,15 +496,15 @@
 					"file": "core/server/routes/frontend.js",
 					"settings":
 					{
-						"buffer_size": 1038,
+						"buffer_size": 1118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								487,
-								487
+								993,
+								993
 							]
 						],
 						"settings":
@@ -547,7 +564,59 @@
 							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 18.0,
-						"translation.y": 1623.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "core/server/controllers/frontend.js",
+					"settings":
+					{
+						"buffer_size": 11747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3935,
+								3935
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1530.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "content/themes/poltergeist/js/general.js",
+					"settings":
+					{
+						"buffer_size": 13735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								618,
+								618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
