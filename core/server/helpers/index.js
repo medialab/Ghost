@@ -605,6 +605,9 @@ function styleModeCross(str,link) {
   var cross = "<span class='modes'>[<span class='smallcaps'>"+c+"</span>]</span>";
   var mode = "<span class='modes'>[<span class='smallcaps'>"+m+"</span>]</span>";
   return str
+    // acronyms
+    .replace(/[^(\[|A-Z)]([A-Z]{3,})[^(\]|A-Z)]/g," <span class='smallcaps'>\$1</span> ")
+    // modecrosses
     .replace(/\[([A-Z]{2,})[\.-·•]([A-Z]{2,})\]/g, cross)
     .replace(/\[([A-Z]{2,})\]/g, mode);
 };
@@ -730,6 +733,9 @@ registerHelpers = function (ghost, config) {
 
     registerThemeHelper('siteurl', function (options) {
       return coreHelpers.config().url;
+    });
+    registerThemeHelper('inquiryurl', function (options) {
+      return coreHelpers.config().inquiry_url;
     });
 
 
