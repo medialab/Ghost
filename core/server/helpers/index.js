@@ -726,9 +726,22 @@ registerHelpers = function (ghost, config) {
 
       // return text.replace(/(\s+([;:]))/g,function( a,b ){return "&nbsp;PPPPPPPP" + a.replace(/\s/,'')});
     });
+
+
     registerThemeHelper('siteurl', function (options) {
       return coreHelpers.config().url;
     });
+
+
+    registerThemeHelper('if_env', function(context, options) {
+      console.log(process.env.NODE_ENV, options.hash.compare);
+        if (process.env.NODE_ENV == options.hash.compare)
+            return options.fn(this);
+        return options.inverse(this);
+    });
+
+
+
     registerThemeHelper('aime_title', function (options) {        
         var lang = i18n.getLocale(),
             splitted = this.title.split(/\/\//g),
@@ -807,6 +820,8 @@ registerHelpers = function (ghost, config) {
             return options.fn(this);
         return options.inverse(this);
     });
+
+
     registerThemeHelper('split_each', function(context, options) {
       var ret = "",
           split = context.split(",");

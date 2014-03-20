@@ -55,46 +55,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "core/server/routes/frontend.js",
-			"settings":
-			{
-				"buffer_size": 1118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/locales/en.json",
-			"settings":
-			{
-				"buffer_size": 80615,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/locales/fr.json",
-			"settings":
-			{
-				"buffer_size": 86863,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "core/server/controllers/frontend.js",
-			"settings":
-			{
-				"buffer_size": 11747,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/themes/poltergeist/js/general.js",
-			"settings":
-			{
-				"buffer_size": 13735,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -164,6 +124,11 @@
 	},
 	"file_history":
 	[
+		"/Users/daniele.guido/Sites/Ghost/core/server/routes/frontend.js",
+		"/Users/daniele.guido/Sites/Ghost/content/locales/en.json",
+		"/Users/daniele.guido/Sites/Ghost/content/locales/fr.json",
+		"/Users/daniele.guido/Sites/Ghost/core/server/controllers/frontend.js",
+		"/Users/daniele.guido/Sites/Ghost/content/themes/poltergeist/js/general.js",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/css/style.less",
 		"/Users/pierre/poa/Ghost/content/themes/poltergeist/js/general.js",
 		"/Users/pierre/poa/Ghost/README.md",
@@ -286,12 +251,7 @@
 		"/Users/pierre/poa/aime/aime-api/server/README.md",
 		"/Users/pierre/poa/aime/aime-api/server/app/views/home/index.jade",
 		"/Users/pierre/poa/aime/aime-api/server/app/controllers/bam.graph.js",
-		"/Users/pierre/poa/aime/aime-api/server/public/data/fromEngine_fr.json",
-		"/Users/pierre/poa/aime/protected/models/ContributionItem.php",
-		"/Users/pierre/poa/aime/aime-api/server/public/data/book_sample.json",
-		"/Users/pierre/poa/aime/js/display/modules/column.js",
-		"/Users/pierre/poa/aime/protected/views/layouts/template.hb",
-		"/Users/pierre/poa/aime/js/display/modules/editor.js"
+		"/Users/pierre/poa/aime/aime-api/server/public/data/fromEngine_fr.json"
 	],
 	"find":
 	{
@@ -488,139 +448,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "core/server/routes/frontend.js",
-					"settings":
-					{
-						"buffer_size": 1118,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								993,
-								993
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "content/locales/en.json",
-					"settings":
-					{
-						"buffer_size": 80615,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16863,
-								16863
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 126.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "content/locales/fr.json",
-					"settings":
-					{
-						"buffer_size": 86863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18701,
-								18701
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 18.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "core/server/controllers/frontend.js",
-					"settings":
-					{
-						"buffer_size": 11747,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3935,
-								3935
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1530.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "content/themes/poltergeist/js/general.js",
-					"settings":
-					{
-						"buffer_size": 13735,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								618,
-								618
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
