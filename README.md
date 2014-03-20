@@ -1,7 +1,3 @@
-# TODO
-- use bitly api to track /ime/fr/doc/1234 links automatically
-- auto track [modes] and link them to the platform element (make it understand /ime/fr/mode/REF !)
-
 # medialab notes about this branch
 
 This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
@@ -15,13 +11,6 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
   - `/` to the homepage we manage in our [poltergeist](https://github.com/medialab/poltergeist) Ghost theme
   - `/blog` and `/blog?p=234` redirect to the blog article (to keep running old blog links)
   - `/tag/:slug` route (findByTag in frontend.js, api.js, post.js)
-  - `/ime/:lang/:type/:id` redirect to the platform element
-    - `/ime/en/book/2344,1231` (chapter_id, subchapter_id)
-    - `/ime/fr/doc/1243`
-    - `/ime/fr/voc/8732`
-    - `/ime/fr/voc/DRO`
-    - `/ime/en/voc/REF-REP`
-  - `/inquiry` is the aime (Yii) platform (is routed by apache - outside this project)  
 - some helpers (end of `helpers/index.js`) (i18n versions, styling of [MODES], ...)
 - admin list of posts: `published_at` sort rather than `updated_at`
   - `core/client/router.js`
