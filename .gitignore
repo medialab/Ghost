@@ -64,3 +64,6 @@ config.js
 
 # Coverage reports
 coverage.html
+
+#sublime
+*.sublime-workspace
