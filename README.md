@@ -46,15 +46,30 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
 - grunt
 
 ### Run
+
+NB: after adding a supervisorctl .conf file, you need to:
+
+  supervisorctl reread
+  supervisorctl update
+
+
 #### Dev
+
+Locally
 
   npm start
 
+On server
+
+  sudo supervisorctl restart aime_home_page_dev
+
 #### Prod
+you need to cp `aime_home_page.conf` to `/etc/supervisor/conf.d/`
 
   sudo supervisorctl restart aime_home_page
 
-Logs
+Logs (see supervisor conf)
+
   `tail -f /var/log/supervisor/aime_home_page.log`
   `tail -f /var/log/supervisor/aime_home_page_err.log`
 

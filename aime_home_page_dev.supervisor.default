@@ -1,0 +1,9 @@
+[program:aime_home_page_dev]
+command = node /datas/www/aime_home_page_dev/index.js
+directory = /datas/www/aime_home_page_dev
+user = ghost
+autostart = true
+autorestart = true
+stdout_logfile = /var/log/supervisor/aime_home_page_dev.log
+stderr_logfile = /var/log/supervisor/aime_home_page_dev_err.log
+environment = NODE_ENV="production"
