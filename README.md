@@ -86,10 +86,10 @@ Logs (see supervisor conf)
 - ininteressant: 199, /where-standing/
 
 # Redirects
-## were updated in articles
-- `www.modesofexistence.org` to `www.modesofexistence.org/inquiry`
+## article content was updated !
+- `www.modesofexistence.org` changed to `www.modesofexistence.org/inquiry`
 - old blog links `/blog/?p=x` (see routes above)
-- platform elements `/ime/en/cont/123` (see routes above)
+- platform elements linked using shortened syntax `/ime/en/cont/123`
 
 ## Disqus translation .csv
 To be used in the disqs website under tools > migration
