@@ -25,8 +25,7 @@ var ourCategories = ['event','discuss','material','tool'];
 
 frontendControllers = {
 
-    // aime shortener url used to be here.
-    // we rather put it on the aime_crossings_server
+    // aime shortener url used to be here. now it's on the aime_crossings_server
  
     oldposts: function(req, res, next) {
       var root = ghost.blogGlobals().path === '/' ? '' : ghost.blogGlobals().path;

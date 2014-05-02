@@ -36,42 +36,53 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
         url = git://github.com/medialab/poltergeist.git
     - git pull
 
-- sudo gem install sass
-- sudo gem install bourbon
+```
+sudo gem install sass
+sudo gem install bourbon
 
-- git submodule update --init (for casper theme)
-- npm install -g grunt-cli
-- npm install
-- grunt init
-- grunt
+git submodule update --init (for casper theme)
+npm install -g grunt-cli
+npm install
+grunt init
+grunt
+```
 
 ### Run
 
 NB: after adding a supervisorctl .conf file, you need to:
 
-  supervisorctl reread
-  supervisorctl update
+```
+supervisorctl reread
+supervisorctl update
+```
 
 
 #### Dev
 
-Locally
-
-  npm start
+Localhost
+```
+npm start
+```
 
 On server
-
-  sudo supervisorctl restart aime_home_page_dev
+```
+sudo supervisorctl restart aime_home_page_dev
+```
 
 #### Prod
-you need to cp `aime_home_page.conf` to `/etc/supervisor/conf.d/`
+You need to
 
-  sudo supervisorctl restart aime_home_page
+```
+cp ./aime_home_page.conf to /etc/supervisor/conf.d/
+sudo supervisorctl restart aime_home_page
+```
 
 Logs (see supervisor conf)
 
-  `tail -f /var/log/supervisor/aime_home_page.log`
-  `tail -f /var/log/supervisor/aime_home_page_err.log`
+```
+tail -f /var/log/supervisor/aime_home_page.log
+tail -f /var/log/supervisor/aime_home_page_err.log
+```
 
 # Migration
 ## Categories are now special tags

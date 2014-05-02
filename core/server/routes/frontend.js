@@ -25,8 +25,8 @@ module.exports = function (server) {
     // set lang
     server.get('/lang/:lang/', frontend.setlang);
 
-    // redirect shorturl service to element http://modesofexistence.org/ime/en/voc/1764/
-    server.get('/ime/:lang/:type/:id/', frontend.shortenerElements);
+    // aime shortener url used to be here. now it's on the aime_crossings_server
+    //server.get('/ime/:lang/:type/:id/', frontend.shortenerElements);
 
     // home (nb: js in our theme will redirect to platform if there is an hash to platform)
     server.get('/', frontend.homepage);

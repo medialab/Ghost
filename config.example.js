@@ -10,10 +10,11 @@ config = {
     development: {
         wordpress_redirects: mapping.wordpress,
         modecross_ids: mapping.modecross,
-        inquiry_url: 'http://modesofexistence.org/inquiry',
+        inquiry_url: 'http://aime.medialab.sciences-po.fr/inquiry_dev',
+        crossings_url: 'http://aime.medialab.sciences-po.fr/crossings_dev/dist',
         // The url to use when providing links to the site, E.g. in RSS and email.
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
-        url: 'http://my-ghost-blog.com',
+        url: 'http://aime.medialab.sciences-po.fr/',
 
         // Example mail config
         // Visit http://docs.ghost.org/mail for instructions
@@ -41,7 +42,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            port: '2372'
         }
     },
 
@@ -52,6 +53,7 @@ config = {
         wordpress_redirects: mapping.wordpress,
         modecross_ids: mapping.modecross,
         inquiry_url: 'http://modesofexistence.org/inquiry',
+        crossings_url: 'http://modesofexistence.org/crossings',
         // must not contain a path suffix after the hostname - "subdirs" are not (yet) supported! 
         url: 'http://my-ghost-blog.com',
         mail: {},

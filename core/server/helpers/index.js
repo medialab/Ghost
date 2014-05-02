@@ -737,6 +737,9 @@ registerHelpers = function (ghost, config) {
     registerThemeHelper('inquiryurl', function (options) {
       return coreHelpers.config().inquiry_url;
     });
+    registerThemeHelper('crossingsurl', function (options) {
+      return coreHelpers.config().crossings_url;
+    });
 
 
     registerThemeHelper('if_env', function(context, options) {
