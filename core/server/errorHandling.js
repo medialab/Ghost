@@ -3,6 +3,7 @@ var _      = require('underscore'),
     colors = require('colors'),
     fs     = require('fs'),
     path   = require('path'),
+    config = require('./config'),
     errors,
 
     // Paths for views
@@ -185,9 +186,11 @@ errors = {
         var message = res.isAdmin && req.session.user ? "No Ghost Found" : "Page Not Found";
 
         if (req.method === 'GET') {
-            this.renderErrorPage(404, message, req, res, next);
+            //this.renderErrorPage(404, message, req, res, next);
+            return res.redirect(config().url);
         } else {
-            res.send(404, message);
+            //res.send(404, message);
+            return res.redirect(config().url);
         }
     },
 

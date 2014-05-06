@@ -176,7 +176,8 @@ frontendControllers = {
         }).otherwise(function (err) {
             var e = new Error(err.message);
             e.status = err.errorCode;
-            return next(e);
+            return res.redirect(config().url);
+            //return next(e);
         });
     },
     'rss': function (req, res, next) {
