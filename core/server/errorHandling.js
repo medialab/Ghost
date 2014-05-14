@@ -186,11 +186,9 @@ errors = {
         var message = res.isAdmin && req.session.user ? "No Ghost Found" : "Page Not Found";
 
         if (req.method === 'GET') {
-            //this.renderErrorPage(404, message, req, res, next);
-            return res.redirect(config().url);
+            this.renderErrorPage(404, message, req, res, next);
         } else {
-            //res.send(404, message);
-            return res.redirect(config().url);
+            res.send(404, message);
         }
     },
 
