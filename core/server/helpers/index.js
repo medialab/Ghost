@@ -607,7 +607,7 @@ function styleModeCross(str,link) {
   return str
     // acronyms
     .replace(/\[ */g,"[").replace(/ *\]/g,"]")
-    .replace(/([^(\[|A-Z)])([A-Z ]{4,})([^(\]|A-Z)])/g,"\$1 <span class='smallcaps'>\$2</span> \$3")
+    .replace(/([^\[]) ([A-Z]{3,}) ([^\]])/g,"\$1 <span class='smallcaps'>\$2</span> \$3")
     // modecrosses
     .replace(/\[([A-Z]{2,})[\.\-·•]([A-Z]{2,})\]/g, cross)
     .replace(/\[([A-Z]{2,})\]/g, mode);
