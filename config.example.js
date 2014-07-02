@@ -9,7 +9,7 @@ config = {
     // ### Development **(default)**
     development: {
         wordpress_redirects: mapping.wordpress,
-        modecross_ids: mapping.modecross,
+        modecross_ids: mapping.modecross, // seems to be deprecated since /ime url-shortener is managed within crossings_server
         inquiry_url: 'http://aime.medialab.sciences-po.fr/inquiry_dev',
         crossings_url: 'http://aime.medialab.sciences-po.fr/crossings_dev/dist',
         // The url to use when providing links to the site, E.g. in RSS and email.

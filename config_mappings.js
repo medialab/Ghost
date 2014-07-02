@@ -1,5 +1,7 @@
 mapping = {};
 
+// seems to be deprecated since /ime url-shortener is now managed within crossings_server
+
 // those mappings were obtained from console after looking at the exported data (aime-api)
 mapping.modecross = {
   'en': {
