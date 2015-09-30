@@ -46,9 +46,26 @@ npm install
 grunt init
 grunt
 ```
+- install the v0.10.40 node binaries (required by our old version of ghost)
+
 
 ### Run
 
+#### pm2
+
+- you need to first install pm2
+- then edit the env variable about the runtime profile
+- and finally run ghost with pm2 targeting the right node version
+
+```
+sudo npm install -g pm2
+echo "export NODE_ENV=production" >> ~/.profile
+source ~/.profile
+pm2 start --interpreter node-v0.10.40/bin/node index.js
+```
+
+
+#### supervisor way (might be deprecated)
 NB: after adding a supervisorctl .conf file, you need to:
 
 ```
