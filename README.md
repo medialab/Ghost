@@ -37,8 +37,8 @@ This is the medialab forked branch of [Ghost](https://github.com/TryGhost/Ghost)
     - git pull
 
 ```
-sudo gem install sass
-sudo gem install bourbon
+sudo gem install sass -v 3.3.3
+ sudo gem install bourbon -v 3.1.8
 
 git submodule update --init (for casper theme)
 npm install -g grunt-cli
