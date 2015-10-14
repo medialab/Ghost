@@ -599,8 +599,8 @@ function styleModeCross(str,link) {
   if(link) {
     var lang = i18n.getLocale();
     var baseurl = coreHelpers.config().url;
-    c = "<a href='"+baseurl+"/ime/"+lang+"/voc/$1-$2' target='_blank'>"+c+"</a>";
-    m = "<a href='"+baseurl+"/ime/"+lang+"/voc/$1' target='_blank'>"+m+"</a>";
+    c = "<a href='"+baseurl+"aime/"+lang+"/voc/$1-$2' target='_blank'>"+c+"</a>";
+    m = "<a href='"+baseurl+"aime/"+lang+"/voc/$1' target='_blank'>"+m+"</a>";
   }
   var cross = "<span class='modes'>[<span class='smallcaps'>"+c+"</span>]</span>";
   var mode = "<span class='modes'>[<span class='smallcaps'>"+m+"</span>]</span>";
